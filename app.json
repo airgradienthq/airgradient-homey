@@ -59,7 +59,7 @@
         "measure_pm25",
         "measure_pm10",
         "measure_co2",
-        "measure_pm3_cnt",
+        "measure_pm03_cnt",
         "measure_temperature",
         "measure_humidity",
         "measure_voc",
@@ -102,7 +102,7 @@
         "measure_pm25",
         "measure_pm10",
         "measure_co2",
-        "measure_pm3_cnt",
+        "measure_pm03_cnt",
         "measure_temperature",
         "measure_humidity",
         "measure_voc",
@@ -155,12 +155,12 @@
     "measure_nox": {
       "type": "number",
       "title": {
-        "en": "tVOC"
+        "en": "NOx"
       },
       "units": {
-        "en": "ppm"
+        "en": "ppb"
       },
-      "decimals": 3,
+      "decimals": 0,
       "getable": true,
       "setable": false,
       "insights": true,
@@ -170,17 +170,26 @@
     "measure_nox_idx": {
       "type": "number",
       "title": {
-        "en": "tVOC"
+        "en": "NOx Index"
       },
-      "units": {
-        "en": "ppm"
-      },
-      "decimals": 3,
+      "decimals": 0,
       "getable": true,
       "setable": false,
       "insights": true,
       "uiComponent": "sensor",
       "icon": "./assets/measure_noX.svg"
+    },
+    "measure_pm03_cnt": {
+      "type": "number",
+      "title": {
+        "en": "PM 0.3 Count"
+      },
+      "decimals": 0,
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "icon": "./assets/measure_pm0.3.svg"
     },
     "measure_pm1": {
       "type": "number",
@@ -212,30 +221,15 @@
       "uiComponent": "sensor",
       "icon": "./assets/measure_pm10.svg"
     },
-    "measure_pm3_cnt": {
-      "type": "number",
-      "title": {
-        "en": "O3"
-      },
-      "units": {
-        "en": "µg/m³"
-      },
-      "decimals": 3,
-      "getable": true,
-      "setable": false,
-      "insights": true,
-      "uiComponent": "sensor",
-      "icon": "./assets/measure_pm0.3.svg"
-    },
     "measure_voc": {
       "type": "number",
       "title": {
-        "en": "tVOC"
+        "en": "VOC"
       },
       "units": {
-        "en": "ppm"
+        "en": "ppb"
       },
-      "decimals": 3,
+      "decimals": 2,
       "getable": true,
       "setable": false,
       "insights": true,
@@ -245,12 +239,9 @@
     "measure_voc_idx": {
       "type": "number",
       "title": {
-        "en": "tVOC"
+        "en": "VOC Index"
       },
-      "units": {
-        "en": "ppm"
-      },
-      "decimals": 3,
+      "decimals": 0,
       "getable": true,
       "setable": false,
       "insights": true,
