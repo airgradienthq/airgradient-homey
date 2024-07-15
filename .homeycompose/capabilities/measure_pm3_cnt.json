@@ -1,0 +1,12 @@
+{
+	"type": "number",
+	"title": {
+		"en": "PM 0.3 Count"
+	},
+	"decimals": 0,
+	"getable": true,
+	"setable": false,
+	"insights": true,
+	"uiComponent": "sensor",
+	"icon": "./assets/measure_pm0.3.svg"
+}

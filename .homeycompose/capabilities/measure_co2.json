@@ -1,0 +1,15 @@
+{
+	"type": "number",
+	"title": {
+		"en": "CO2"
+	},
+	"units": {
+		"en": "ppm"
+	  },
+	"decimals": 0,
+	"getable": true,
+	"setable": false,
+	"insights": true,
+	"uiComponent": "sensor",
+	"icon": "./assets/measure_co2.svg"
+}

@@ -1,0 +1,15 @@
+{
+	"type": "number",
+	"title": {
+		"en": "NOx"
+	},
+	"units": {
+		"en": "ppb"
+	  },
+	"decimals": 0,
+	"getable": true,
+	"setable": false,
+	"insights": true,
+	"uiComponent": "sensor",
+	"icon": "./assets/measure_noX.svg"
+}

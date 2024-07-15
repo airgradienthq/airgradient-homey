@@ -1,0 +1,15 @@
+{
+	"type": "number",
+	"title": {
+		"en": "VOC"
+	},
+	"units": {
+		"en": "ppb"
+	  },
+	"decimals": 2,
+	"getable": true,
+	"setable": false,
+	"insights": true,
+	"uiComponent": "sensor",
+	"icon": "./assets/measure_voc.svg"
+}

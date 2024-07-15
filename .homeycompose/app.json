@@ -1,0 +1,50 @@
+{
+  "id": "com.airgradient",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "AirGradient"
+  },
+  "brandColor": "#1a75bd",
+  "description": {
+    "en": "Adds support for AirGradient devices."
+  },
+  "category": [
+    "climate"
+  ],
+  "tags": {
+    "en": [
+      "air quality",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "oxygen",
+      "O2",
+      "CO2",
+      "CO",
+      "NO2",
+      "health",
+      "temperature",
+      "humidity",
+      "pressure"
+    ]
+  },
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png"
+  },
+  "author": {
+    "name": "Grant Slender",
+    "email": "gslender@gmail.com"
+  },
+  "source": "https://github.com/gslender/com.airgradient",
+  "bugs": {
+    "url": "https://github.com/gslender/com.airgradient/issues"
+  }
+}

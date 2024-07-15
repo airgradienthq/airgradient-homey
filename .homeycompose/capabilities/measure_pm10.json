@@ -1,0 +1,15 @@
+{
+	"type": "number",
+	"title": {
+		"en": "PM10"
+	},
+	"units": {
+		"en": "µg/m³"
+	  },
+	"decimals": 3,
+	"getable": true,
+	"setable": false,
+	"insights": true,
+	"uiComponent": "sensor",
+	"icon": "./assets/measure_pm10.svg"
+}
