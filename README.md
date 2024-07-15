@@ -15,7 +15,7 @@ The Homey Sensors have the following measurements reported as capabilities
 | PM25         | Particulate Matter 2.5     | µg/m³  |  [x]  Use Corrected Value     |
 | PM10         | Particulate Matter 10      | µg/m³  |                               |
 | CO2          | Carbon Dioxide             | ppm    |                               |
-| PM3 Count       | Particulate Matter 0.3 Count | count |                               |
+| PM0.3 Count      | Particulate Matter 0.3 Count | count |                               |
 | Temperature  | Temperature                | °C     |  [x]  Use Corrected Value     |
 | Humidity     | Humidity                   | %      |  [x]  Use Corrected Value     |
 | VOC          | Volatile Organic Compounds | ppb    |                               |

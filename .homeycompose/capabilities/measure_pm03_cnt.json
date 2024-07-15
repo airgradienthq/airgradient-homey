@@ -1,7 +1,7 @@
 {
 	"type": "number",
 	"title": {
-		"en": "PM 0.3 Count"
+		"en": "PM0.3 Count"
 	},
 	"decimals": 0,
 	"getable": true,
