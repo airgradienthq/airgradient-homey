@@ -16,10 +16,12 @@ The Homey Sensors have the following measurements reported as capabilities
 | PM10         | Particulate Matter 10      | µg/m³  |                               |
 | CO2          | Carbon Dioxide             | ppm    |                               |
 | PM0.3 Count      | Particulate Matter 0.3 Count | count |                               |
-| Temperature  | Temperature                | °C     |  [x]  Use Corrected Value     |
-| Humidity     | Humidity                   | %      |  [x]  Use Corrected Value     |
-| VOC          | Volatile Organic Compounds | ppb    |                               |
-| VOC Index      | VOC Index                  | index  |                               |
-| NOx          | Nitrogen Oxides            | ppb    |                               |
-| NOx Index      | NOx Index                  | index  |                               |
+| Temperature  | Temperature                | °C     |  [x]  Use Corrected Value (only Open Air Model)     |
+| Humidity     | Relative Humidity          | %      |  [x]  Use Corrected Value (only Open Air Model)     |
+| VOC Index          | Senisiron VOC (Volatile Organic Compounds) Index | VOC Index Points    |                               |
+| VOC Raw      | VOC Raw Value               | Signal in ticks  |                               |
+| NOx Index          | Senisiron NOx Index   | NOx Index Points    |                               |
+| NOx Raw      | NOx Raw Value               | Signal in ticks  |                               |
 
+For VOC/NOx see:
+https://sensirion.com/media/documents/5FE8673C/61E96F50/Sensirion_Gas_Sensors_Datasheet_SGP41.pdf
