@@ -1,17 +1,11 @@
 import Homey from 'homey';
+import SharedDevice from '../../lib/shared_device'
 
-class IndoorDevice extends Homey.Device {
+class IndoorDevice extends SharedDevice {
 
   async onInit() {
-    this.log('IndoorDevice has been initialized');
-  }
-
-  async onSettings({oldSettings,newSettings,changedKeys,}: {
-    oldSettings: { [key: string]: boolean | string | number | undefined | null };
-    newSettings: { [key: string]: boolean | string | number | undefined | null };
-    changedKeys: string[];
-  }): Promise<string | void> {
-    this.log("IndoorDevice settings where changed");
+    super.onInit();
+    this.log('OutdoorDevice has been initialized');
   }
 
 }

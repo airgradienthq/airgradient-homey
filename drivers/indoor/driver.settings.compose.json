@@ -1,0 +1,90 @@
+[
+    {
+        "type": "group",
+        "label": {
+            "en": "Device Settings"
+        },
+        "children": [
+            {
+                "id": "ipaddress",
+                "type": "text",
+                "label": {
+                    "en": "IP Address"
+                },
+                "value": ""
+            },
+            {
+                "id": "polling_interval",
+                "type": "dropdown",
+                "label": {
+                    "en": "Polling Interval"
+                },
+                "value": "60000",
+                "values": [
+                    {
+                        "id": "15000",
+                        "label": {
+                            "en": "15 Seconds"
+                        }
+                    },
+                    {
+                        "id": "30000",
+                        "label": {
+                            "en": "30 Seconds"
+                        }
+                    },
+                    {
+                        "id": "60000",
+                        "label": {
+                            "en": "1 Minute"
+                        }
+                    },
+                    {
+                        "id": "120000",
+                        "label": {
+                            "en": "2 Minutes"
+                        }
+                    },
+                    {
+                        "id": "300000",
+                        "label": {
+                            "en": "5 Minutes"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "group",
+        "label": {
+            "en": "Information"
+        },
+        "children": [
+            {
+                "id": "serialno",
+                "type": "label",
+                "label": {
+                    "en": "Serial No"
+                },
+                "value": ""
+            },
+            {
+                "id": "firmware",
+                "type": "label",
+                "label": {
+                    "en": "Firmware"
+                },
+                "value": ""
+            },
+            {
+                "id": "model",
+                "type": "label",
+                "label": {
+                    "en": "Model"
+                },
+                "value": ""
+            }
+        ]
+    }
+]

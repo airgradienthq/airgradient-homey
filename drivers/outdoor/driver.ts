@@ -10,7 +10,7 @@ class OutdoorDriver extends Homey.Driver {
   }
 
   async onPairListDevices() {
-    const discoveryStrategy = this.homey.discovery.getStrategy("bond");
+    const discoveryStrategy = this.homey.discovery.getStrategy("airgradient");
     const discoveryResults = discoveryStrategy.getDiscoveryResults();
     const devices = await Promise.all(
       Object.values(discoveryResults).map(async (result) => {

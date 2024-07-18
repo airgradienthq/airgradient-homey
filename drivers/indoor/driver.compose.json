@@ -38,38 +38,5 @@
       "id": "add_my_devices",
       "template": "add_devices"
     }
-  ],
-  "settings": [
-    {
-      "id": "ipaddress",
-      "type": "text",
-      "label": {
-        "en": "IP address"
-      }
-    },
-    {
-      "id": "use_pm25_corrected",
-      "type": "checkbox",
-      "label": {
-        "en": "Use Corrected Value for PM25"
-      },
-      "value": true
-    },
-    {
-      "id": "use_temperature_corrected",
-      "type": "checkbox",
-      "label": {
-        "en": "Use Corrected Value for Temperature"
-      },
-      "value": true
-    },
-    {
-      "id": "use_humidity_corrected",
-      "type": "checkbox",
-      "label": {
-        "en": "Use Corrected Value for Humidity"
-      },
-      "value": true
-    }
   ]
 }
