@@ -27,7 +27,7 @@
       "O2",
       "CO2",
       "CO",
-      "NO2",
+      "NOx",
       "health",
       "temperature",
       "humidity",
@@ -43,8 +43,8 @@
     "name": "Grant Slender",
     "email": "gslender@gmail.com"
   },
-  "source": "https://github.com/gslender/com.airgradient",
+  "source": "https://github.com/airgradienthq/airgradient-homey",
   "bugs": {
-    "url": "https://github.com/gslender/com.airgradient/issues"
+    "url": "https://github.com/airgradienthq/airgradient-homey/issues"
   }
 }

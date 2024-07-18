@@ -15,13 +15,15 @@ The Homey Sensors have the following measurements reported as capabilities
 | PM25         | Particulate Matter 2.5     | µg/m³  |  [x]  Use Corrected Value     |
 | PM10         | Particulate Matter 10      | µg/m³  |                               |
 | CO2          | Carbon Dioxide             | ppm    |                               |
-| PM0.3 Count      | Particulate Matter 0.3 Count | count |                               |
-| Temperature  | Temperature                | °C     |  [x]  Use Corrected Value (only Open Air Model)     |
-| Humidity     | Relative Humidity          | %      |  [x]  Use Corrected Value (only Open Air Model)     |
-| VOC Index          | Senisiron VOC (Volatile Organic Compounds) Index | VOC Index Points    |                               |
-| VOC Raw      | VOC Raw Value               | Signal in ticks  |                               |
-| NOx Index          | Senisiron NOx Index   | NOx Index Points    |                               |
-| NOx Raw      | NOx Raw Value               | Signal in ticks  |                               |
+| PM0.3 Count      | Particulate Matter 0.3 Count |  |                               |
+| Temperature  | Temperature                | °C     |  [x]  Use Corrected Value (only Open Air outdoor model)     |
+| Humidity     | Relative Humidity          | %      |  [x]  Use Corrected Value (only Open Air outdoor model)     |
+| VOC Index          | Senisiron VOC (Volatile Organic Compounds) Index | idx    |                               |
+| VOC Raw      | VOC Raw Value               | ticks  |                               |
+| NOx Index          | Senisiron NOx (Nitrogen Oxides) Index   | idx    |                               |
+| NOx Raw      | NOx Raw Value               | ticks  |                               |
 
-For VOC/NOx see:
+## VOC/NOx Index
+![VOC/NOx Index Scale Diagram](https://raw.githubusercontent.com/airgradienthq/airgradient-homey/main/vocnoxindex.png)
+For more information see:
 https://sensirion.com/media/documents/5FE8673C/61E96F50/Sensirion_Gas_Sensors_Datasheet_SGP41.pdf

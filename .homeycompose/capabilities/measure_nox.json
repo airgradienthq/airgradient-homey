@@ -4,7 +4,7 @@
 		"en": "NOx"
 	},
 	"units": {
-		"en": "ppb"
+		"en": "ticks"
 	  },
 	"decimals": 0,
 	"getable": true,

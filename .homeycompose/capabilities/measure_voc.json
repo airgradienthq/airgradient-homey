@@ -4,7 +4,7 @@
 		"en": "VOC"
 	},
 	"units": {
-		"en": "ppb"
+		"en": "ticks"
 	  },
 	"decimals": 2,
 	"getable": true,

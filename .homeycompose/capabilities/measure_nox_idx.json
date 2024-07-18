@@ -3,6 +3,9 @@
 	"title": {
 		"en": "NOx Index"
 	},
+	"units": {
+		"en": "idx"
+	  },
 	"decimals": 0,
 	"getable": true,
 	"setable": false,
