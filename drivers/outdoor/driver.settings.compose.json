@@ -6,7 +6,7 @@
         },
         "children": [
             {
-                "id": "ipaddress",
+                "id": "ipAddress",
                 "type": "text",
                 "label": {
                     "en": "IP Address"
@@ -14,7 +14,7 @@
                 "value": ""
             },
             {
-                "id": "polling_interval",
+                "id": "pollingInterval",
                 "type": "dropdown",
                 "label": {
                     "en": "Polling Interval"

@@ -1,39 +1,16 @@
-import Homey from 'homey';
-import AirGradientApp from '../../app'
+import PairSession from 'homey/lib/PairSession';
+import SharedDriver from '../../lib/shared_driver'
 
-class IndoorDriver extends Homey.Driver {
-  app!: AirGradientApp
+class IndoorDriver extends SharedDriver {
 
   async onInit() {
+    super.onInit();
     this.log('IndoorDriver has been initialized');
-    this.app = this.homey.app as AirGradientApp;
   }
 
-  async onPairListDevices() {
-    const discoveryStrategy = this.homey.discovery.getStrategy("airgradient");
-    const discoveryResults = discoveryStrategy.getDiscoveryResults(); const devices = await Promise.all(
-      Object.values(discoveryResults).map(async (result) => {
-        const mdnsResult = result as Homey.DiscoveryResultMDNSSD;
-        const isAirGradientOne = await this.app.isAirGradientOne(mdnsResult.address);
-        if (isAirGradientOne) {
-          return {
-            name: mdnsResult.name,
-            data: {
-              id: mdnsResult.id,
-            },
-            settings: {
-              ipaddress: mdnsResult.address,
-            },
-          };
-        }
-        return null;
-      })
-    );
-
-    const filteredDevices = devices.filter(device => device !== null);
-    return filteredDevices;
+  async onPair(session: PairSession) {
+    return super.onSharedPair(session,false);
   }
-
 }
 
 module.exports = IndoorDriver;

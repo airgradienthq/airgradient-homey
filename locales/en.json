@@ -1,1 +1,14 @@
-{}
+{
+    "save": "Create Device",
+    "saving": "Verifying Device",
+    "settings": {
+        "title": "Application settings",
+        "saved": "Settings has now been saved."
+    },
+    "device": {
+        "create": "Connect to a AirGradient device",
+        "ipAddress": "Device IP Address",
+        "ipAddressHelp": "This is the unique IP address of your AirGradient device.",
+        "ipAddressRequired": "Please provide the IP address of your AirGradient device."
+    }
+}

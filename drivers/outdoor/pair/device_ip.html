@@ -1,0 +1,92 @@
+<fieldset class="homey-form-fieldset">
+
+    <div class="homey-form-group">
+        <label class="homey-form-label" for="ipAddress" data-i18n="device.ipAddress">IP Address</label>
+        <input class="homey-form-input" id="ipAddress" type="text" value="" />
+        <p style="font-size: 0.8rem; font-style: italic;" data-i18n="device.ipAddressHelp"></p>
+    </div>
+</fieldset>
+
+<button id="save" class="homey-button-primary-full is-disabled" data-i18n="save" disabled="true">Save</button>
+
+<script type="text/javascript">
+    const listenFor = ['keydown', 'keyup', 'keypress', 'change'];
+    let isSaving = false;
+    let hasToken = false;
+
+    var tokenElement = document.getElementById("token");
+    var ipAddressElement = document.getElementById("ipAddress");
+    var saveElement = document.getElementById("save");
+
+    Homey.setTitle(Homey.__("device.create"));
+    // Homey.on("has_token", function (value) {
+    //     hasToken = value;
+
+    //     if (!hasToken) {
+    //         tokenContainer.style.display = "block";
+    //     }
+    // });
+
+    function validate() {
+        saveElement.disabled = !ipAddressElement.value.length || (!hasToken && !tokenElement.value.length);
+
+        if (saveElement.disabled) {
+            saveElement.classList.add("is-disabled");
+        } else {
+            saveElement.classList.remove("is-disabled");
+        }
+    }
+
+    listenFor.forEach(event => {
+        tokenElement.addEventListener(event, validate);
+        ipAddressElement.addEventListener(event, validate);
+    });
+
+    validate();
+
+    saveElement.addEventListener("click", function () {
+
+        if (isSaving) {
+            return;
+        }
+
+        saveElement.classList.add("is-loading");
+        saveElement.textContent = Homey.__('saving');
+        isSaving = true;
+
+        function createSBBDevice(result) {
+            const sbbName = result?.name ?? `SBB Fan@${ipAddressElement.value}`;
+            const sbbId = `id${result?.id}@${ipAddressElement.value}`;
+            Homey.createDevice({
+                name: sbbName,
+                data: {
+                    id: sbbId,
+                },
+                settings: {
+                    token: tokenElement.value,
+                    ipAddress: ipAddressElement.value,
+                    details: result,
+                },
+                capabilities: ["fan_mode", "onoff"]
+            }).then(function (result) {
+                Homey.done();
+            }).catch(function (error) {
+                Homey.alert(error);
+            });
+        }
+
+        Homey.emit("check_details", { token: tokenElement.value, ipAddress: ipAddressElement.value })
+            .then(result => {
+                createSBBDevice(result);
+            })
+            .catch(function (error) {
+                if (error) {
+                    Homey.alert(error);
+                    isSaving = false;
+                    saveElement.classList.remove("is-loading");
+                    saveElement.textContent = Homey.__('save');
+                }
+            });
+
+    });
+</script>

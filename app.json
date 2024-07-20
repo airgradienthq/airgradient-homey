@@ -28,7 +28,7 @@
       "O2",
       "CO2",
       "CO",
-      "NO2",
+      "NOx",
       "health",
       "temperature",
       "humidity",
@@ -44,9 +44,9 @@
     "name": "Grant Slender",
     "email": "gslender@gmail.com"
   },
-  "source": "https://github.com/gslender/com.airgradient",
+  "source": "https://github.com/airgradienthq/airgradient-homey",
   "bugs": {
-    "url": "https://github.com/gslender/com.airgradient/issues"
+    "url": "https://github.com/airgradienthq/airgradient-homey/issues"
   },
   "drivers": [
     {
@@ -79,51 +79,100 @@
       },
       "pair": [
         {
-          "id": "list_my_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_my_devices"
-          }
-        },
-        {
-          "id": "add_my_devices",
-          "template": "add_devices"
+          "id": "device_ip"
         }
       ],
+      "id": "indoor",
       "settings": [
         {
-          "id": "ipaddress",
-          "type": "text",
+          "type": "group",
           "label": {
-            "en": "IP address"
-          }
+            "en": "Device Settings"
+          },
+          "children": [
+            {
+              "id": "ipAddress",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "pollingInterval",
+              "type": "dropdown",
+              "label": {
+                "en": "Polling Interval"
+              },
+              "value": "60000",
+              "values": [
+                {
+                  "id": "15000",
+                  "label": {
+                    "en": "15 Seconds"
+                  }
+                },
+                {
+                  "id": "30000",
+                  "label": {
+                    "en": "30 Seconds"
+                  }
+                },
+                {
+                  "id": "60000",
+                  "label": {
+                    "en": "1 Minute"
+                  }
+                },
+                {
+                  "id": "120000",
+                  "label": {
+                    "en": "2 Minutes"
+                  }
+                },
+                {
+                  "id": "300000",
+                  "label": {
+                    "en": "5 Minutes"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "id": "use_pm25_corrected",
-          "type": "checkbox",
+          "type": "group",
           "label": {
-            "en": "Use Corrected Value for PM25"
+            "en": "Information"
           },
-          "value": true
-        },
-        {
-          "id": "use_temperature_corrected",
-          "type": "checkbox",
-          "label": {
-            "en": "Use Corrected Value for Temperature"
-          },
-          "value": true
-        },
-        {
-          "id": "use_humidity_corrected",
-          "type": "checkbox",
-          "label": {
-            "en": "Use Corrected Value for Humidity"
-          },
-          "value": true
+          "children": [
+            {
+              "id": "serialno",
+              "type": "label",
+              "label": {
+                "en": "Serial No"
+              },
+              "value": ""
+            },
+            {
+              "id": "firmware",
+              "type": "label",
+              "label": {
+                "en": "Firmware"
+              },
+              "value": ""
+            },
+            {
+              "id": "model",
+              "type": "label",
+              "label": {
+                "en": "Model"
+              },
+              "value": ""
+            }
+          ]
         }
-      ],
-      "id": "indoor"
+      ]
     },
     {
       "name": {
@@ -155,51 +204,127 @@
       },
       "pair": [
         {
-          "id": "list_my_devices",
+          "id": "list_devices",
           "template": "list_devices",
+          "options": {
+            "singular": true
+          },
           "navigation": {
-            "next": "add_my_devices"
+            "next": "add_devices"
           }
         },
         {
-          "id": "add_my_devices",
+          "id": "add_devices",
           "template": "add_devices"
         }
       ],
+      "id": "outdoor",
       "settings": [
         {
-          "id": "ipaddress",
-          "type": "text",
+          "type": "group",
           "label": {
-            "en": "IP address"
-          }
+            "en": "Device Settings"
+          },
+          "children": [
+            {
+              "id": "ipAddress",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "pollingInterval",
+              "type": "dropdown",
+              "label": {
+                "en": "Polling Interval"
+              },
+              "value": "60000",
+              "values": [
+                {
+                  "id": "15000",
+                  "label": {
+                    "en": "15 Seconds"
+                  }
+                },
+                {
+                  "id": "30000",
+                  "label": {
+                    "en": "30 Seconds"
+                  }
+                },
+                {
+                  "id": "60000",
+                  "label": {
+                    "en": "1 Minute"
+                  }
+                },
+                {
+                  "id": "120000",
+                  "label": {
+                    "en": "2 Minutes"
+                  }
+                },
+                {
+                  "id": "300000",
+                  "label": {
+                    "en": "5 Minutes"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "temperature_uses_corrected",
+              "type": "checkbox",
+              "value": true,
+              "label": {
+                "en": "Temperature uses Corrected Value"
+              }
+            },
+            {
+              "id": "humidity_uses_corrected",
+              "type": "checkbox",
+              "value": true,
+              "label": {
+                "en": "Humidity uses Corrected Value"
+              }
+            }
+          ]
         },
         {
-          "id": "use_pm25_corrected",
-          "type": "checkbox",
+          "type": "group",
           "label": {
-            "en": "Use Corrected Value for PM25"
+            "en": "Information"
           },
-          "value": true
-        },
-        {
-          "id": "use_temperature_corrected",
-          "type": "checkbox",
-          "label": {
-            "en": "Use Corrected Value for Temperature"
-          },
-          "value": true
-        },
-        {
-          "id": "use_humidity_corrected",
-          "type": "checkbox",
-          "label": {
-            "en": "Use Corrected Value for Humidity"
-          },
-          "value": true
+          "children": [
+            {
+              "id": "serialno",
+              "type": "label",
+              "label": {
+                "en": "Serial No"
+              },
+              "value": ""
+            },
+            {
+              "id": "firmware",
+              "type": "label",
+              "label": {
+                "en": "Firmware"
+              },
+              "value": ""
+            },
+            {
+              "id": "model",
+              "type": "label",
+              "label": {
+                "en": "Model"
+              },
+              "value": ""
+            }
+          ]
         }
-      ],
-      "id": "outdoor"
+      ]
     }
   ],
   "capabilities": {
@@ -224,7 +349,7 @@
         "en": "NOx"
       },
       "units": {
-        "en": "ppb"
+        "en": "ticks"
       },
       "decimals": 0,
       "getable": true,
@@ -237,6 +362,9 @@
       "type": "number",
       "title": {
         "en": "NOx Index"
+      },
+      "units": {
+        "en": "idx"
       },
       "decimals": 0,
       "getable": true,
@@ -293,7 +421,7 @@
         "en": "VOC"
       },
       "units": {
-        "en": "ppb"
+        "en": "ticks"
       },
       "decimals": 2,
       "getable": true,
@@ -306,6 +434,9 @@
       "type": "number",
       "title": {
         "en": "VOC Index"
+      },
+      "units": {
+        "en": "idx"
       },
       "decimals": 0,
       "getable": true,
