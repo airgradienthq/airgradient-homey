@@ -11,5 +11,23 @@
 	"setable": false,
 	"insights": true,
 	"uiComponent": "sensor",
-	"icon": "./assets/measure_co2.svg"
+	"icon": "./assets/measure_co2.svg",
+    "$flow": {
+        "triggers": [
+            {
+                "id": "measure_co2_changed",
+                "title": {
+                    "en": "The CO2 value has changed"
+                },
+                "tokens": [
+                    {
+                        "name": "$id",
+                        "title": "$title",
+                        "type": "$type",
+                        "example": 2
+                    }
+                ]
+            }
+        ]
+    }
 }

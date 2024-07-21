@@ -11,5 +11,23 @@
 	"setable": false,
 	"insights": true,
 	"uiComponent": "sensor",
-	"icon": "./assets/measure_tvoc.svg"
+	"icon": "./assets/measure_tvoc.svg",
+    "$flow": {
+        "triggers": [
+            {
+                "id": "measure_voc_idx_changed",
+                "title": {
+                    "en": "The VOC Index value has changed"
+                },
+                "tokens": [
+                    {
+                        "name": "$id",
+                        "title": "$title",
+                        "type": "$type",
+                        "example": 2
+                    }
+                ]
+            }
+        ]
+    }
 }

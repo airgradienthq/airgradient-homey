@@ -8,5 +8,23 @@
 	"setable": false,
 	"insights": true,
 	"uiComponent": "sensor",
-	"icon": "./assets/measure_pm0.3.svg"
+	"icon": "./assets/measure_pm0.3.svg",
+    "$flow": {
+        "triggers": [
+            {
+                "id": "measure_pm03_cnt_changed",
+                "title": {
+                    "en": "The PM0.3 Count value has changed"
+                },
+                "tokens": [
+                    {
+                        "name": "$id",
+                        "title": "$title",
+                        "type": "$type",
+                        "example": 2
+                    }
+                ]
+            }
+        ]
+    }
 }
