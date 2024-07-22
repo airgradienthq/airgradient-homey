@@ -19,7 +19,7 @@ export default class SharedDriver extends Homey.Driver {
         const response = await air.getAirQualityData();
         if (response != null && response.isOpenAirOutdoor() === onlyOpenAirOutdoor) {
             return {
-                name: response.model + ' [' + response.serialno + ']',
+                name: response.getModelName(),
                 data: {
                     id: response.serialno
                 },

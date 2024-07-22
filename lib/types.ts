@@ -22,6 +22,9 @@ export interface AirQualityDataType {
   model: string;
 
   isOpenAirOutdoor(): boolean;
+  isONEIndoor(): boolean;
+  isDIY(): boolean;
+  getModelName(): string;
 }
 
 export class AirQualityData implements AirQualityDataType {
@@ -72,7 +75,22 @@ export class AirQualityData implements AirQualityDataType {
   }
 
   isOpenAirOutdoor(): boolean {
-    return this.model === 'O-1PST';
+    return this.model.startsWith('O-1PST');
+  }
+
+  isONEIndoor(): boolean {
+    return this.model.startsWith('I-9PSL');
+  }
+
+  isDIY(): boolean {
+    return this.model.includes('DIY');
+  }
+
+  getModelName(): string {
+    if (this.isOpenAirOutdoor()) return 'AirGradient Open Air';
+    if (this.isONEIndoor()) return 'AirGradient ONE';
+    if (this.isDIY()) return 'AirGradient DIY';
+    return 'unknown';
   }
 }
 
