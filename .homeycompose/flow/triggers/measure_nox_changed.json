@@ -1,0 +1,14 @@
+{
+    "id": "measure_nox_changed",
+    "title": {
+        "en": "The NOx value has changed"
+    },
+    "tokens": [
+        {
+            "name": "$id",
+            "title": "$title",
+            "type": "number",
+            "example": 2
+        }
+    ]
+}

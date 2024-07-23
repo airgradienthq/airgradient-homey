@@ -1,0 +1,14 @@
+{
+    "id": "measure_co2_changed",
+    "title": {
+        "en": "The CO2 value has changed"
+    },
+    "tokens": [
+        {
+            "name": "$id",
+            "title": "$title",
+            "type": "number",
+            "example": 2
+        }
+    ]
+}

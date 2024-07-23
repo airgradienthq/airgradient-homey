@@ -11,23 +11,5 @@
 	"setable": false,
 	"insights": true,
 	"uiComponent": "sensor",
-	"icon": "./assets/measure_noX.svg",
-    "$flow": {
-        "triggers": [
-            {
-                "id": "measure_nox_changed",
-                "title": {
-                    "en": "The NOx value has changed"
-                },
-                "tokens": [
-                    {
-                        "name": "$id",
-                        "title": "$title",
-                        "type": "$type",
-                        "example": 2
-                    }
-                ]
-            }
-        ]
-    }
+	"icon": "./assets/measure_noX.svg"
 }

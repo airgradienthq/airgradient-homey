@@ -1,0 +1,15 @@
+
+{
+    "id": "measure_pm03_cnt_changed",
+    "title": {
+        "en": "The PM0.3 Count value has changed"
+    },
+    "tokens": [
+        {
+            "name": "$id",
+            "title": "$title",
+            "type": "number",
+            "example": 2
+        }
+    ]
+}
