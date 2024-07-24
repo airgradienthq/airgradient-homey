@@ -27,8 +27,19 @@
     "large": "{{driverAssetsPath}}/images/large.png"
   },
   "pair": [
-      {
-        "id": "device_ip"
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "options": {
+        "singular": true
+      },
+      "navigation": {
+        "next": "add_devices"
       }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
   ]
 }

@@ -51,6 +51,7 @@ export default class SharedDriver extends Homey.Driver {
                 const devices = await Promise.all(
                     Object.values(discoveryResults).map(async (result) => {
                         const mdnsResult = result as Homey.DiscoveryResultMDNSSD;
+                        this.log(`mdnsResult: ${JSON.stringify(mdnsResult)}`);
                         const device = await this.createOnlyValidAirGradientDevice(mdnsResult.address, onlyOpenAirOutdoor);
                         return device;
                     })
