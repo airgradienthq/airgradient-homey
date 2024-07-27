@@ -52,8 +52,31 @@
                         }
                     }
                 ]
-            }
-        ]
+            },
+            {
+                "id": "postDataToAirGradient",
+                "type": "checkbox",
+                "value": true,
+                "label": {
+                    "en": "Post Data To AirGradient"
+                }
+            },
+            {
+                "id": "pm02_uses_corrected",
+                "type": "checkbox",
+                "value": true,
+                "label": {
+                    "en": "PM 2.5 uses Corrected Value"
+                }
+            },
+            {
+                "id": "co2CalibrationRequested",
+                "label": {
+                    "en": "Request CO2 Calibration"
+                },
+                "type": "checkbox",
+                "value": false
+            }     ]
     },
     {
         "type": "group",

@@ -21,9 +21,8 @@ export interface AirQualityDataType {
   firmware: string;
   model: string;
 
-  isOpenAirOutdoor(): boolean;
-  isONEIndoor(): boolean;
-  isDIY(): boolean;
+  isOutdoor(): boolean;
+  isIndoor(): boolean;
   getModelName(): string;
 }
 
@@ -74,22 +73,17 @@ export class AirQualityData implements AirQualityDataType {
     this.model = data.model || '';
   }
 
-  isOpenAirOutdoor(): boolean {
-    return this.model.startsWith('O-1PST');
+  isOutdoor(): boolean {
+    return this.model.startsWith('O-');
   }
 
-  isONEIndoor(): boolean {
-    return this.model.startsWith('I-9PSL');
-  }
-
-  isDIY(): boolean {
-    return this.model.includes('DIY');
+  isIndoor(): boolean {
+    return this.model.startsWith('I-');
   }
 
   getModelName(): string {
-    if (this.isOpenAirOutdoor()) return 'AirGradient Open Air';
-    if (this.isONEIndoor()) return 'AirGradient ONE';
-    if (this.isDIY()) return 'AirGradient DIY';
+    if (this.isOutdoor()) return 'Open Air Outdoor';
+    if (this.isIndoor()) return 'ONE Indoor';
     return 'unknown';
   }
 }
@@ -106,11 +100,43 @@ export interface Configuration {
   temperatureUnit: 'c' | 'C' | 'f' | 'F';
   configurationControl: 'both' | 'local' | 'cloud';
   postDataToAirGradient: boolean;
-  co2CalibrationRequested: boolean;
-  ledBarTestRequested: boolean;
   noxLearningOffset: number;
   tvocLearningOffset: number;
   offlineMode: boolean;
+}
+
+export class DeviceConfig implements Configuration {
+  country: string;
+  pmStandard: 'ugm3' | 'us-aqi';
+  ledBarMode: 'co2' | 'pm' | 'off';
+  abcDays: number;
+  tvocLearningOffset: number;
+  noxLearningOffset: number;
+  mqttBrokerUrl: string;
+  temperatureUnit: 'c' | 'C' | 'f' | 'F';
+  configurationControl: 'both' | 'local' | 'cloud';
+  postDataToAirGradient: boolean;
+  ledBarBrightness: number;
+  displayBrightness: number;
+  offlineMode: boolean;
+  model: string;
+
+  constructor(data: Partial<Configuration>) {
+    this.country = data.country || '';
+    this.pmStandard = data.pmStandard || 'ugm3';
+    this.ledBarMode = data.ledBarMode || 'off';
+    this.abcDays = data.abcDays || 0;
+    this.tvocLearningOffset = data.tvocLearningOffset || 0;
+    this.noxLearningOffset = data.noxLearningOffset || 0;
+    this.mqttBrokerUrl = data.mqttBrokerUrl || '';
+    this.temperatureUnit = data.temperatureUnit || 'c';
+    this.configurationControl = data.configurationControl || 'both';
+    this.postDataToAirGradient = data.postDataToAirGradient ?? false;
+    this.ledBarBrightness = data.ledBarBrightness || 0;
+    this.displayBrightness = data.displayBrightness || 0;
+    this.offlineMode = data.offlineMode ?? false;
+    this.model = data.model || '';
+  }
 }
 
 export type LogFunction = (message?: any, ...optionalParams: any[]) => void;

@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.airgradient",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -45,6 +45,7 @@
     "email": "gslender@gmail.com"
   },
   "source": "https://github.com/airgradienthq/airgradient-homey",
+  "support": "https://github.com/airgradienthq/airgradient-homey",
   "bugs": {
     "url": "https://github.com/airgradienthq/airgradient-homey/issues"
   },
@@ -264,6 +265,30 @@
                   }
                 }
               ]
+            },
+            {
+              "id": "postDataToAirGradient",
+              "type": "checkbox",
+              "value": true,
+              "label": {
+                "en": "Post Data To AirGradient"
+              }
+            },
+            {
+              "id": "pm02_uses_corrected",
+              "type": "checkbox",
+              "value": true,
+              "label": {
+                "en": "PM 2.5 uses Corrected Value"
+              }
+            },
+            {
+              "id": "co2CalibrationRequested",
+              "label": {
+                "en": "Request CO2 Calibration"
+              },
+              "type": "checkbox",
+              "value": false
             }
           ]
         },
@@ -402,20 +427,20 @@
               ]
             },
             {
-              "id": "temperature_uses_corrected",
-              "type": "checkbox",
-              "value": true,
+              "id": "postDataToAirGradient",
               "label": {
-                "en": "Temperature uses Corrected Value"
-              }
+                "en": "Post Data To AirGradient"
+              },
+              "type": "checkbox",
+              "value": true
             },
             {
-              "id": "humidity_uses_corrected",
-              "type": "checkbox",
-              "value": true,
+              "id": "co2CalibrationRequested",
               "label": {
-                "en": "Humidity uses Corrected Value"
-              }
+                "en": "Request CO2 Calibration"
+              },
+              "type": "checkbox",
+              "value": true
             }
           ]
         },

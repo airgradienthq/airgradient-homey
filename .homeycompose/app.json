@@ -1,6 +1,6 @@
 {
   "id": "com.airgradient",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -44,6 +44,7 @@
     "email": "gslender@gmail.com"
   },
   "source": "https://github.com/airgradienthq/airgradient-homey",
+  "support": "https://github.com/airgradienthq/airgradient-homey",
   "bugs": {
     "url": "https://github.com/airgradienthq/airgradient-homey/issues"
   }

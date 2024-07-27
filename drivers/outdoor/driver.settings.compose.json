@@ -54,20 +54,20 @@
                 ]
             },
             {
-                "id": "temperature_uses_corrected",
-                "type": "checkbox",
-                "value": true,
+                "id": "postDataToAirGradient",
                 "label": {
-                    "en": "Temperature uses Corrected Value"
-                }
+                    "en": "Post Data To AirGradient"
+                },
+                "type": "checkbox",
+                "value": true
             },
             {
-                "id": "humidity_uses_corrected",
-                "type": "checkbox",
-                "value": true,
+                "id": "co2CalibrationRequested",
                 "label": {
-                    "en": "Humidity uses Corrected Value"
-                }
+                    "en": "Request CO2 Calibration"
+                },
+                "type": "checkbox",
+                "value": true
             }
         ]
     },

@@ -14,10 +14,10 @@ export default class SharedDriver extends Homey.Driver {
         return [];
     }
 
-    async createOnlyValidAirGradientDevice(ipAddress: string, onlyOpenAirOutdoor: boolean): Promise<any> {
+    async createOnlyValidAirGradientDevice(ipAddress: string, outdoorOnly: boolean): Promise<any> {
         const air = new AirGradient(ipAddress, this.log, true);
         const response = await air.getAirQualityData();
-        if (response != null && response.isOpenAirOutdoor() === onlyOpenAirOutdoor) {
+        if (response != null && response.isOutdoor() === outdoorOnly) {
             return {
                 name: response.getModelName(),
                 data: {
@@ -34,7 +34,7 @@ export default class SharedDriver extends Homey.Driver {
         return null;
     }
 
-    async onSharedPair(session: PairSession, onlyOpenAirOutdoor: boolean) {
+    async onSharedPair(session: PairSession, outdoorOnly: boolean) {
 
         session.setHandler('list_devices', async (data) => {
             const discoveryStrategy = this.homey.discovery.getStrategy("airgradient");
@@ -52,7 +52,7 @@ export default class SharedDriver extends Homey.Driver {
                     Object.values(discoveryResults).map(async (result) => {
                         const mdnsResult = result as Homey.DiscoveryResultMDNSSD;
                         this.log(`mdnsResult: ${JSON.stringify(mdnsResult)}`);
-                        const device = await this.createOnlyValidAirGradientDevice(mdnsResult.address, onlyOpenAirOutdoor);
+                        const device = await this.createOnlyValidAirGradientDevice(mdnsResult.address, outdoorOnly);
                         return device;
                     })
                 );
@@ -73,7 +73,7 @@ export default class SharedDriver extends Homey.Driver {
 
         session.setHandler("check_details", async (data) => {
             this.log('check_details data=', data);
-            return await this.createOnlyValidAirGradientDevice(data.ipAddress, onlyOpenAirOutdoor);
+            return await this.createOnlyValidAirGradientDevice(data.ipAddress, outdoorOnly);
         });
     }
 }
