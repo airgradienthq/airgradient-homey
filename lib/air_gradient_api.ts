@@ -1,9 +1,10 @@
 
 import axios, { AxiosInstance } from 'axios';
-import { AirQualityData,DeviceConfig, LogFunction } from './types';
+import { AirGradientConnectStatus, AirQualityData, DeviceConfig, LogFunction } from './types';
+import { AxiosError } from 'axios';
 
 export default class AirGradient {
-    
+
     static OK = 'OK';
 
     log!: LogFunction;
@@ -38,7 +39,7 @@ export default class AirGradient {
      * Returns a AirQualityData if the ipaddress provided is a AirGradient device 
      * by requesting the JSON from 'http://{ipaddress}/measures/current' otherwise 'null'
      */
-    async getAirQualityData(): Promise<AirQualityData | null> {
+    async getAirQualityData(): Promise<AirQualityData> {
         if (this.enableDebug) this.log(`getAirQualityData: ${this.ipAddress}`);
         try {
             const http = await this.createHttp(this.ipAddress);
@@ -48,17 +49,22 @@ export default class AirGradient {
                 if (this.enableDebug) this.log(`AirQualityData: ${JSON.stringify(airQualityData)}`);
                 return airQualityData;
             }
-        } catch (e) {
-            this.log(e);
+        } catch (error) {
+            if (error instanceof AxiosError && error.message.includes('EHOSTUNREACH')) {
+                 return new AirQualityData({status: AirGradientConnectStatus.UNREACHABLE});
+            } else {
+                // Handle other types of errors
+                this.log('Unknown Error:', error);
+            }
         }
-        return null;
+        return new AirQualityData({});
     }
 
     /**
      * Returns a DeviceConfig if the ipaddress provided is a AirGradient device 
      * by requesting the JSON from 'http://{ipaddress}/config' otherwise 'null'
      */
-    async getDeviceConfig(): Promise<DeviceConfig | null> {
+    async getDeviceConfig(): Promise<DeviceConfig> {
         if (this.enableDebug) this.log(`getAirQualityData: ${this.ipAddress}`);
         try {
             const http = await this.createHttp(this.ipAddress);
@@ -68,23 +74,33 @@ export default class AirGradient {
                 if (this.enableDebug) this.log(`DeviceConfig: ${JSON.stringify(deviceConfig)}`);
                 return deviceConfig;
             }
-        } catch (e) {
-            this.log(e);
+        } catch (error) {
+            if (error instanceof AxiosError && error.message.includes('EHOSTUNREACH')) {
+                 return new DeviceConfig({status: AirGradientConnectStatus.UNREACHABLE});
+            } else {
+                // Handle other types of errors
+                this.log('Unknown Error:', error);
+            }
         }
-        return null;
+        return new DeviceConfig({});
     }
 
     async updateConfig(payload: any) {
         if (this.enableDebug) this.log(`updateConfig: ${this.ipAddress} >> ${JSON.stringify(payload)}`);
         try {
             const http = await this.createHttp(this.ipAddress);
-            const response = await http.put(`/config`,payload);
+            const response = await http.put(`/config`, payload);
             if (response && this.enableDebug) this.log(`response: ${JSON.stringify(response.status)}`);
-        } catch (e) {
-            this.log(e);
+        } catch (error) {
+            if (error instanceof AxiosError && error.message.includes('EHOSTUNREACH')) {
+                 return;
+            } else {
+                // Handle other types of errors
+                this.log('Unknown Error:', error);
+            }
         }
     }
 
-  // co2CalibrationRequested: boolean;
-  // ledBarTestRequested: boolean;
+    // co2CalibrationRequested: boolean;
+    // ledBarTestRequested: boolean;
 }

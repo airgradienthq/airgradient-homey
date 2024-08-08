@@ -3,10 +3,24 @@
     "title": {
         "en": "The VOC value has changed"
     },
+    "titleFormatted": {
+        "en": "[[device]] has reported a change in VOC"
+    },
+    "args": [
+        {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+        }
+    ],
     "tokens": [
         {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_voc",
+            "title": {
+                "en": "VOC"
+            },
             "type": "number",
             "example": 2
         }

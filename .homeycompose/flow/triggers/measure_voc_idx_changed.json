@@ -3,10 +3,24 @@
     "title": {
         "en": "The VOC Index value has changed"
     },
+    "titleFormatted": {
+        "en": "[[device]] has reported a change in VOC Index"
+    },
+    "args": [
+        {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+        }
+    ],
     "tokens": [
         {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_voc_idx",
+            "title": {
+                "en": "VOC Index"
+            },
             "type": "number",
             "example": 2
         }

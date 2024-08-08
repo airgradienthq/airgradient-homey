@@ -1,4 +1,4 @@
-# AirGradient
+AirGradient
 Join Us in the Fight Against Air Pollution
 Seven million people die every year due to air pollution. Monitoring air quality enables people worldwide to better protect themselves.
 

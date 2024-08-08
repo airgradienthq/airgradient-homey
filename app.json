@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.airgradient",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -56,10 +56,24 @@
         "title": {
           "en": "The CO2 value has changed"
         },
+        "titleFormatted": {
+          "en": "[[device]] has reported a change in CO2"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+          }
+        ],
         "tokens": [
           {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_co2",
+            "title": {
+              "en": "CO2"
+            },
             "type": "number",
             "example": 2
           }
@@ -70,10 +84,24 @@
         "title": {
           "en": "The NOx value has changed"
         },
+        "titleFormatted": {
+          "en": "[[device]] has reported a change in NOx"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+          }
+        ],
         "tokens": [
           {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_nox",
+            "title": {
+              "en": "NOx"
+            },
             "type": "number",
             "example": 2
           }
@@ -84,10 +112,24 @@
         "title": {
           "en": "The NOx Index value has changed"
         },
+        "titleFormatted": {
+          "en": "[[device]] has reported a change in NOx Index"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+          }
+        ],
         "tokens": [
           {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_nox_idx",
+            "title": {
+              "en": "NOx Index"
+            },
             "type": "number",
             "example": 2
           }
@@ -98,10 +140,24 @@
         "title": {
           "en": "The PM0.3 Count value has changed"
         },
+        "titleFormatted": {
+          "en": "[[device]] has reported a change in PM0.3 Count"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+          }
+        ],
         "tokens": [
           {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_pm03_cnt",
+            "title": {
+              "en": "PM0.3 Count"
+            },
             "type": "number",
             "example": 2
           }
@@ -112,10 +168,24 @@
         "title": {
           "en": "The PM1 value has changed"
         },
+        "titleFormatted": {
+          "en": "[[device]] has reported a change in PM1"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+          }
+        ],
         "tokens": [
           {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_pm1",
+            "title": {
+              "en": "PM1"
+            },
             "type": "number",
             "example": 2
           }
@@ -126,10 +196,24 @@
         "title": {
           "en": "The PM10 value has changed"
         },
+        "titleFormatted": {
+          "en": "[[device]] has reported a change in PM10"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+          }
+        ],
         "tokens": [
           {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_pm10",
+            "title": {
+              "en": "PM10"
+            },
             "type": "number",
             "example": 2
           }
@@ -140,10 +224,24 @@
         "title": {
           "en": "The VOC value has changed"
         },
+        "titleFormatted": {
+          "en": "[[device]] has reported a change in VOC"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+          }
+        ],
         "tokens": [
           {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_voc",
+            "title": {
+              "en": "VOC"
+            },
             "type": "number",
             "example": 2
           }
@@ -154,10 +252,24 @@
         "title": {
           "en": "The VOC Index value has changed"
         },
+        "titleFormatted": {
+          "en": "[[device]] has reported a change in VOC Index"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+          }
+        ],
         "tokens": [
           {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_voc_idx",
+            "title": {
+              "en": "VOC Index"
+            },
             "type": "number",
             "example": 2
           }

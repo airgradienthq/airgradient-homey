@@ -3,10 +3,24 @@
     "title": {
         "en": "The NOx Index value has changed"
     },
+    "titleFormatted": {
+        "en": "[[device]] has reported a change in NOx Index"
+    },
+    "args": [
+        {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+        }
+    ],
     "tokens": [
         {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_nox_idx",
+            "title": {
+                "en": "NOx Index"
+            },
             "type": "number",
             "example": 2
         }

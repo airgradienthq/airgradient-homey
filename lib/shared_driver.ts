@@ -42,9 +42,12 @@ export default class SharedDriver extends Homey.Driver {
             try {
 
                 /* get already paired devices and remove them from discoveryResults */
-                const exsitingDevices = await this.app.getAllDevices();
-                for (const exsitingDevice of exsitingDevices) {
-                    delete discoveryResults[exsitingDevice.main_device];
+                const drivers = this.homey.drivers.getDrivers();
+                for (const driver in drivers) {
+                    const exsitingDevices = drivers[driver].getDevices();
+                    for (const exsitingDevice of exsitingDevices) {
+                        delete discoveryResults[exsitingDevice.getData().id];
+                    }
                 }
 
                 /* filter devices object with discovered devices */

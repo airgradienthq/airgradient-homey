@@ -1,6 +1,6 @@
 import Homey from 'homey';
 import AirGradient from './air_gradient_api';
-import { AirQualityData } from './types';
+import { AirQualityData, AirGradientConnectStatus } from './types';
 
 export default class SharedDevice extends Homey.Device {
     static enableDebug = true;
@@ -38,6 +38,7 @@ export default class SharedDevice extends Homey.Device {
             }
         }
 
+        this.setAvailable();
         this.homey.clearInterval(this.refreshInterval);
         this.homey.setTimeout(() => {
             this.startPolling();
@@ -61,7 +62,13 @@ export default class SharedDevice extends Homey.Device {
     async updateCapabilities() {
         const air = new AirGradient(this.getSetting('ipAddress'), this.log, SharedDevice.enableDebug);
         const aqd = await air.getAirQualityData();
-        if (aqd == null) return;
+        if (aqd.status == AirGradientConnectStatus.FAILED_UKNOWN) return;
+
+
+        if (aqd.status == AirGradientConnectStatus.UNREACHABLE) {
+            this.setUnavailable(`Device is not reachable at ${this.getSetting('ipAddress')}`);
+            return;
+        }
 
         const config = await air.getDeviceConfig();
 

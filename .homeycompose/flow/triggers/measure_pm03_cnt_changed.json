@@ -4,10 +4,24 @@
     "title": {
         "en": "The PM0.3 Count value has changed"
     },
+    "titleFormatted": {
+        "en": "[[device]] has reported a change in PM0.3 Count"
+    },
+    "args": [
+        {
+            "type": "device",
+            "name": "device",
+            "title": {
+              "en": "Device"
+            }
+        }
+    ],
     "tokens": [
         {
-            "name": "$id",
-            "title": "$title",
+            "name": "measure_pm03_cnt",
+            "title": {
+                "en": "PM0.3 Count"
+            },
             "type": "number",
             "example": 2
         }

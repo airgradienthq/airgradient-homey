@@ -1,4 +1,5 @@
 export interface AirQualityDataType {
+  status: AirGradientConnectStatus;
   serialno: string;
   wifi: number;
   pm01: number;
@@ -26,7 +27,16 @@ export interface AirQualityDataType {
   getModelName(): string;
 }
 
+
+export enum AirGradientConnectStatus {
+  SUCCESS,
+  FAILED_UKNOWN,
+  UNREACHABLE
+}
+
+
 export class AirQualityData implements AirQualityDataType {
+  status: AirGradientConnectStatus;
   serialno: string;
   wifi: number;
   pm01: number;
@@ -50,6 +60,7 @@ export class AirQualityData implements AirQualityDataType {
   model: string;
 
   constructor(data: Partial<AirQualityDataType>) {
+    this.status = data.status || AirGradientConnectStatus.FAILED_UKNOWN;
     this.serialno = data.serialno || '';
     this.wifi = data.wifi || 0;
     this.pm01 = data.pm01 || 0;
@@ -89,6 +100,7 @@ export class AirQualityData implements AirQualityDataType {
 }
 
 export interface Configuration {
+  status: AirGradientConnectStatus;
   country: string;
   model?: string;  // Optional as it is only available in GET
   pmStandard: 'ugm3' | 'us-aqi';
@@ -106,6 +118,7 @@ export interface Configuration {
 }
 
 export class DeviceConfig implements Configuration {
+  status: AirGradientConnectStatus;
   country: string;
   pmStandard: 'ugm3' | 'us-aqi';
   ledBarMode: 'co2' | 'pm' | 'off';
@@ -122,6 +135,7 @@ export class DeviceConfig implements Configuration {
   model: string;
 
   constructor(data: Partial<Configuration>) {
+    this.status = data.status || AirGradientConnectStatus.FAILED_UKNOWN;
     this.country = data.country || '';
     this.pmStandard = data.pmStandard || 'ugm3';
     this.ledBarMode = data.ledBarMode || 'off';
