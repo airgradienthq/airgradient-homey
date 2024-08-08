@@ -72,24 +72,24 @@ export default class SharedDevice extends Homey.Device {
 
         const config = await air.getDeviceConfig();
 
-        this.setSettings({ 'firmware': aqd.firmware });
-        this.setSettings({ 'postDataToAirGradient': config?.postDataToAirGradient });
+        await this.setSettings({ 'firmware': aqd.firmware });
+        await this.setSettings({ 'postDataToAirGradient': config?.postDataToAirGradient });
 
-        this.setCapabilityValue('measure_pm1', aqd.pm01);
-        this.setCapabilityValue('measure_pm10', aqd.pm10);
-        this.setCapabilityValue('measure_co2', aqd.rco2);
-        this.setCapabilityValue('measure_pm03_cnt', aqd.pm003Count);
+        await this.setCapabilityValue('measure_pm1', aqd.pm01);
+        await this.setCapabilityValue('measure_pm10', aqd.pm10);
+        await this.setCapabilityValue('measure_co2', aqd.rco2);
+        await this.setCapabilityValue('measure_pm03_cnt', aqd.pm003Count);
         let pm02 = aqd.pm02;
         if (aqd.isIndoor() && this.getSetting('pm02_uses_corrected')) {
             pm02 = this.calculatePM25(aqd.pm02, aqd.rhum);
         }
-        this.setCapabilityValue('measure_pm25', pm02);
-        this.setCapabilityValue('measure_temperature', aqd.atmp);
-        this.setCapabilityValue('measure_humidity', aqd.rhum);
-        this.setCapabilityValue('measure_voc', aqd.tvocRaw);
-        this.setCapabilityValue('measure_voc_idx', aqd.tvocIndex);
-        this.setCapabilityValue('measure_nox', aqd.noxRaw);
-        this.setCapabilityValue('measure_nox_idx', aqd.noxIndex);
+        await this.setCapabilityValue('measure_pm25', pm02);
+        await this.setCapabilityValue('measure_temperature', aqd.atmp);
+        await this.setCapabilityValue('measure_humidity', aqd.rhum);
+        await this.setCapabilityValue('measure_voc', aqd.tvocRaw);
+        await this.setCapabilityValue('measure_voc_idx', aqd.tvocIndex);
+        await this.setCapabilityValue('measure_nox', aqd.noxRaw);
+        await this.setCapabilityValue('measure_nox_idx', aqd.noxIndex);
     }
 
     onDeleted(): void {
