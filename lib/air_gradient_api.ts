@@ -46,6 +46,7 @@ export default class AirGradient {
             const response = await http.get(`/measures/current`);
             if (response && response.data) {
                 const airQualityData: AirQualityData = new AirQualityData(response.data);
+                airQualityData.status = AirGradientConnectStatus.SUCCESS;
                 if (this.enableDebug) this.log(`AirQualityData: ${JSON.stringify(airQualityData)}`);
                 return airQualityData;
             }
@@ -71,6 +72,7 @@ export default class AirGradient {
             const response = await http.get(`/config`);
             if (response && response.data) {
                 const deviceConfig: DeviceConfig = new DeviceConfig(response.data);
+                deviceConfig.status = AirGradientConnectStatus.SUCCESS;
                 if (this.enableDebug) this.log(`DeviceConfig: ${JSON.stringify(deviceConfig)}`);
                 return deviceConfig;
             }
