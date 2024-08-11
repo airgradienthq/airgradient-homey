@@ -4,16 +4,13 @@
         "en": "The VOC Index value has changed"
     },
     "titleFormatted": {
-        "en": "[[device]] has reported a change in VOC Index"
+        "en": "The VOC Index value has changed"
     },
     "args": [
         {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=indoor|outdoor",
-            "title": {
-              "en": "Device"
-            }
+            "filter": "driver_id=indoor|outdoor"
         }
     ],
     "tokens": [

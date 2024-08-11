@@ -4,16 +4,13 @@
         "en": "The NOx value has changed"
     },
     "titleFormatted": {
-        "en": "[[device]] has reported a change in NOx"
+        "en": "The NOx value has changed"
     },
     "args": [
         {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=indoor|outdoor",
-            "title": {
-              "en": "Device"
-            }
+            "filter": "driver_id=indoor|outdoor"
         }
     ],
     "tokens": [

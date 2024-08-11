@@ -5,16 +5,13 @@
         "en": "The PM0.3 Count value has changed"
     },
     "titleFormatted": {
-        "en": "[[device]] has reported a change in PM0.3 Count"
+        "en": "The PM0.3 Count value has changed"
     },
     "args": [
         {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=indoor|outdoor",
-            "title": {
-              "en": "Device"
-            }
+            "filter": "driver_id=indoor|outdoor"
         }
     ],
     "tokens": [

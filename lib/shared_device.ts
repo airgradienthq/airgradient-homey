@@ -12,7 +12,11 @@ export default class SharedDevice extends Homey.Device {
         this.setSettings({ co2CalibrationRequested: false });
         this.homey.setTimeout(() => {
             this.startPolling();
-        }, 1000);
+        }, this.getRandomNumber(750,1750));
+    }
+    
+    getRandomNumber(min: number, max: number): number {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     async onSettings({ oldSettings, newSettings, changedKeys, }: {

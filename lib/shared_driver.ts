@@ -10,7 +10,7 @@ export default class SharedDriver extends Homey.Driver {
         this.app = this.homey.app as AirGradientApp;
     }
 
-    async onPairListDevices() {
+    async onPairListDevices(): Promise<any[]> {
         return [];
     }
 
