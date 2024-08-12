@@ -1,6 +1,17 @@
 {
   "name": {
-    "en": "Outdoor Monitor"
+    "en": "Outdoor Monitor",
+    "nl": "Buitenmonitor",
+    "da": "Udendørs skærm",
+    "de": "Außenmonitor",
+    "es": "Monitor Exterior",
+    "fr": "Moniteur Extérieur",
+    "it": "Monitor Esterno",
+    "no": "Utemonitor",
+    "sv": "Utomhusmonitor",
+    "pl": "Monitor Zewnętrzny",
+    "ru": "Наружный монитор",
+    "ko": "실외 모니터"
   },
   "class": "sensor",
   "capabilities": [

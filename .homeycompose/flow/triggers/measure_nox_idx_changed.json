@@ -1,26 +1,59 @@
 {
-    "id": "measure_nox_idx_changed",
-    "title": {
-        "en": "The NOx Index value has changed"
-    },
-    "titleFormatted": {
-        "en": "The NOx Index value has changed"
-    },
-    "args": [
-        {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=indoor|outdoor"
-        }
-    ],
-    "tokens": [
-        {
-            "name": "measure_nox_idx",
-            "title": {
-                "en": "NOx Index"
-            },
-            "type": "number",
-            "example": 2
-        }
-    ]
+  "id": "measure_nox_idx_changed",
+  "title": {
+    "en": "The NOx Index value has changed",
+    "nl": "De NOx indexwaarde is gewijzigd",
+    "da": "NOx-indeksværdien er ændret",
+    "de": "Der NOx-Indexwert hat sich geändert",
+    "es": "El valor del índice de NOx ha cambiado",
+    "fr": "La valeur de l'indice NOx a changé",
+    "it": "Il valore dell'indice NOx è cambiato",
+    "no": "NOx-indeksverdien har endret seg",
+    "sv": "NOx-indexvärdet har ändrats",
+    "pl": "Wartość wskaźnika NOx uległa zmianie",
+    "ru": "Значение индекса NOx изменилось",
+    "ko": "NOx 지수 값이 변경되었습니다"
+  },
+  "titleFormatted": {
+    "en": "The NOx Index value has changed",
+    "nl": "De NOx indexwaarde is gewijzigd",
+    "da": "NOx-indeksværdien er ændret",
+    "de": "Der NOx-Indexwert hat sich geändert",
+    "es": "El valor del índice de NOx ha cambiado",
+    "fr": "La valeur de l'indice NOx a changé",
+    "it": "Il valore dell'indice NOx è cambiato",
+    "no": "NOx-indeksverdien har endret seg",
+    "sv": "NOx-indexvärdet har ändrats",
+    "pl": "Wartość wskaźnika NOx uległa zmianie",
+    "ru": "Значение индекса NOx изменилось",
+    "ko": "NOx 지수 값이 변경되었습니다"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=indoor|outdoor"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_nox_idx",
+      "title": {
+        "en": "NOx Index",
+        "nl": "NOx-index",
+        "da": "NOx-indeks",
+        "de": "NOx-Index",
+        "es": "Índice de NOx",
+        "fr": "Indice NOx",
+        "it": "Indice NOx",
+        "no": "NOx-indeks",
+        "sv": "NOx-index",
+        "pl": "Indeks NOx",
+        "ru": "Индекс NOx",
+        "ko": "NOx 지수"
+      },
+      "type": "number",
+      "example": 2
+    }
+  ]
 }

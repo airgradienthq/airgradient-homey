@@ -1,18 +1,40 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.airgradient",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
     "local"
   ],
   "name": {
-    "en": "AirGradient"
+    "en": "AirGradient",
+    "nl": "AirGradient",
+    "da": "AirGradient",
+    "de": "AirGradient",
+    "es": "AirGradient",
+    "fr": "AirGradient",
+    "it": "AirGradient",
+    "no": "AirGradient",
+    "sv": "AirGradient",
+    "pl": "AirGradient",
+    "ru": "AirGradient",
+    "ko": "AirGradient"
   },
   "brandColor": "#1a75bd",
   "description": {
-    "en": "Monitoring your indoor and outdoor air quality."
+    "en": "Monitoring your indoor and outdoor air quality.",
+    "nl": "Monitoring van jouw binnen- en buitenluchtkwaliteit.",
+    "da": "Overvågning af din indendørs og udendørs luftkvalitet.",
+    "de": "Überwachung Ihrer Innen- und Außenluftqualität.",
+    "es": "Monitoreo de la calidad del aire interior y exterior.",
+    "fr": "Surveillance de la qualité de l'air intérieur et extérieur.",
+    "it": "Monitoraggio della qualità dell'aria interna ed esterna.",
+    "no": "Overvåking av din innendørs og utendørs luftkvalitet.",
+    "sv": "Övervakning av din inomhus- och utomhusluftkvalitet.",
+    "pl": "Monitorowanie jakości powietrza w pomieszczeniach i na zewnątrz.",
+    "ru": "Мониторинг качества воздуха в помещении и на улице.",
+    "ko": "실내 및 실외 공기질 모니터링."
   },
   "category": [
     "climate"
@@ -33,6 +55,182 @@
       "temperature",
       "humidity",
       "pressure"
+    ],
+    "nl": [
+      "luchtkwaliteit",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "zuurstof",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "gezondheid",
+      "temperatuur",
+      "vochtigheid",
+      "druk"
+    ],
+    "da": [
+      "luftkvalitet",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "ilt",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "sundhed",
+      "temperatur",
+      "fugtighed",
+      "tryk"
+    ],
+    "de": [
+      "Luftqualität",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "Sauerstoff",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "Gesundheit",
+      "Temperatur",
+      "Feuchtigkeit",
+      "Druck"
+    ],
+    "es": [
+      "calidad del aire",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "oxígeno",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "salud",
+      "temperatura",
+      "humedad",
+      "presión"
+    ],
+    "fr": [
+      "qualité de l'air",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "COV",
+      "oxygène",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "santé",
+      "température",
+      "humidité",
+      "pression"
+    ],
+    "it": [
+      "qualità dell'aria",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "ossigeno",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "salute",
+      "temperatura",
+      "umidità",
+      "pressione"
+    ],
+    "no": [
+      "luftkvalitet",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "oksygen",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "helse",
+      "temperatur",
+      "fuktighet",
+      "trykk"
+    ],
+    "sv": [
+      "luftkvalitet",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "syre",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "hälsa",
+      "temperatur",
+      "luftfuktighet",
+      "tryck"
+    ],
+    "pl": [
+      "jakość powietrza",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "tlen",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "zdrowie",
+      "temperatura",
+      "wilgotność",
+      "ciśnienie"
+    ],
+    "ru": [
+      "качество воздуха",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "ЛОС",
+      "кислород",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "здоровье",
+      "температура",
+      "влажность",
+      "давление"
+    ],
+    "ko": [
+      "공기질",
+      "PM10",
+      "PM2.5",
+      "PM1",
+      "VOC",
+      "산소",
+      "O2",
+      "CO2",
+      "CO",
+      "NOx",
+      "건강",
+      "온도",
+      "습도",
+      "압력"
     ]
   },
   "permissions": [],
@@ -54,10 +252,32 @@
       {
         "id": "measure_nox_changed",
         "title": {
-          "en": "The NOx value has changed"
+          "en": "The NOx value has changed",
+          "nl": "De NOx-waarde is veranderd",
+          "da": "NOx-værdien er ændret",
+          "de": "Der NOx-Wert hat sich geändert",
+          "es": "El valor de NOx ha cambiado",
+          "fr": "La valeur du NOx a changé",
+          "it": "Il valore di NOx è cambiato",
+          "no": "NOx-verdien har endret seg",
+          "sv": "NOx-värdet har ändrats",
+          "pl": "Wartość NOx się zmieniła",
+          "ru": "Значение NOx изменилось",
+          "ko": "NOx 값이 변경되었습니다"
         },
         "titleFormatted": {
-          "en": "The NOx value has changed"
+          "en": "The NOx value has changed",
+          "nl": "De NOx-waarde is veranderd",
+          "da": "NOx-værdien er ændret",
+          "de": "Der NOx-Wert hat sich geändert",
+          "es": "El valor de NOx ha cambiado",
+          "fr": "La valeur du NOx a changé",
+          "it": "Il valore di NOx è cambiato",
+          "no": "NOx-verdien har endret seg",
+          "sv": "NOx-värdet har ändrats",
+          "pl": "Wartość NOx się zmieniła",
+          "ru": "Значение NOx изменилось",
+          "ko": "NOx 값이 변경되었습니다"
         },
         "args": [
           {
@@ -70,7 +290,18 @@
           {
             "name": "measure_nox",
             "title": {
-              "en": "NOx"
+              "en": "NOx",
+              "nl": "NOx",
+              "da": "NOx",
+              "de": "NOx",
+              "es": "NOx",
+              "fr": "NOx",
+              "it": "NOx",
+              "no": "NOx",
+              "sv": "NOx",
+              "pl": "NOx",
+              "ru": "NOx",
+              "ko": "NOx"
             },
             "type": "number",
             "example": 2
@@ -80,10 +311,32 @@
       {
         "id": "measure_nox_idx_changed",
         "title": {
-          "en": "The NOx Index value has changed"
+          "en": "The NOx Index value has changed",
+          "nl": "De NOx indexwaarde is gewijzigd",
+          "da": "NOx-indeksværdien er ændret",
+          "de": "Der NOx-Indexwert hat sich geändert",
+          "es": "El valor del índice de NOx ha cambiado",
+          "fr": "La valeur de l'indice NOx a changé",
+          "it": "Il valore dell'indice NOx è cambiato",
+          "no": "NOx-indeksverdien har endret seg",
+          "sv": "NOx-indexvärdet har ändrats",
+          "pl": "Wartość wskaźnika NOx uległa zmianie",
+          "ru": "Значение индекса NOx изменилось",
+          "ko": "NOx 지수 값이 변경되었습니다"
         },
         "titleFormatted": {
-          "en": "The NOx Index value has changed"
+          "en": "The NOx Index value has changed",
+          "nl": "De NOx indexwaarde is gewijzigd",
+          "da": "NOx-indeksværdien er ændret",
+          "de": "Der NOx-Indexwert hat sich geändert",
+          "es": "El valor del índice de NOx ha cambiado",
+          "fr": "La valeur de l'indice NOx a changé",
+          "it": "Il valore dell'indice NOx è cambiato",
+          "no": "NOx-indeksverdien har endret seg",
+          "sv": "NOx-indexvärdet har ändrats",
+          "pl": "Wartość wskaźnika NOx uległa zmianie",
+          "ru": "Значение индекса NOx изменилось",
+          "ko": "NOx 지수 값이 변경되었습니다"
         },
         "args": [
           {
@@ -96,7 +349,18 @@
           {
             "name": "measure_nox_idx",
             "title": {
-              "en": "NOx Index"
+              "en": "NOx Index",
+              "nl": "NOx-index",
+              "da": "NOx-indeks",
+              "de": "NOx-Index",
+              "es": "Índice de NOx",
+              "fr": "Indice NOx",
+              "it": "Indice NOx",
+              "no": "NOx-indeks",
+              "sv": "NOx-index",
+              "pl": "Indeks NOx",
+              "ru": "Индекс NOx",
+              "ko": "NOx 지수"
             },
             "type": "number",
             "example": 2
@@ -106,10 +370,32 @@
       {
         "id": "measure_pm03_cnt_changed",
         "title": {
-          "en": "The PM0.3 Count value has changed"
+          "en": "The PM0.3 Count value has changed",
+          "nl": "De PM0.3-telling is gewijzigd",
+          "da": "PM0.3-tælleværdien er ændret",
+          "de": "Der PM0.3-Zählwert hat sich geändert",
+          "es": "El valor de conteo de PM0.3 ha cambiado",
+          "fr": "La valeur de comptage PM0.3 a changé",
+          "it": "Il valore di conteggio PM0.3 è cambiato",
+          "no": "PM0.3-telleverdien har endret seg",
+          "sv": "Antalet PM0.3 har ändrats",
+          "pl": "Zmieniono wartość licznika PM0.3",
+          "ru": "Изменилось значение счета PM0.3",
+          "ko": "PM0.3 카운트 값이 변경되었습니다"
         },
         "titleFormatted": {
-          "en": "The PM0.3 Count value has changed"
+          "en": "The PM0.3 Count value has changed",
+          "nl": "De PM0.3-telling is gewijzigd",
+          "da": "PM0.3-tælleværdien er ændret",
+          "de": "Der PM0.3-Zählwert hat sich geändert",
+          "es": "El valor de conteo de PM0.3 ha cambiado",
+          "fr": "La valeur de comptage PM0.3 a changé",
+          "it": "Il valore di conteggio PM0.3 è cambiato",
+          "no": "PM0.3-telleverdien har endret seg",
+          "sv": "Antalet PM0.3 har ändrats",
+          "pl": "Zmieniono wartość licznika PM0.3",
+          "ru": "Изменилось значение счета PM0.3",
+          "ko": "PM0.3 카운트 값이 변경되었습니다"
         },
         "args": [
           {
@@ -122,7 +408,18 @@
           {
             "name": "measure_pm03_cnt",
             "title": {
-              "en": "PM0.3 Count"
+              "en": "PM0.3 Count",
+              "nl": "PM0.3-telling",
+              "da": "PM0.3 Tælling",
+              "de": "PM0.3 Zählung",
+              "es": "Recuento de PM0.3",
+              "fr": "Comptage PM0.3",
+              "it": "Conteggio PM0.3",
+              "no": "PM0.3-telling",
+              "sv": "PM0.3-räkning",
+              "pl": "Licznik PM0.3",
+              "ru": "Счет PM0.3",
+              "ko": "PM0.3 카운트"
             },
             "type": "number",
             "example": 2
@@ -132,10 +429,32 @@
       {
         "id": "measure_pm1_changed",
         "title": {
-          "en": "The PM1 value has changed"
+          "en": "The PM1 value has changed",
+          "nl": "De PM1-waarde is veranderd",
+          "da": "PM1-værdien er ændret",
+          "de": "Der PM1-Wert hat sich geändert",
+          "es": "El valor de PM1 ha cambiado",
+          "fr": "La valeur du PM1 a changé",
+          "it": "Il valore PM1 è cambiato",
+          "no": "PM1-verdien har endret seg",
+          "sv": "PM1-värdet har ändrats",
+          "pl": "Wartość PM1 uległa zmianie",
+          "ru": "Значение PM1 изменилось",
+          "ko": "PM1 값이 변경되었습니다"
         },
         "titleFormatted": {
-          "en": "The PM1 value has changed"
+          "en": "The PM1 value has changed",
+          "nl": "De PM1-waarde is veranderd",
+          "da": "PM1-værdien er ændret",
+          "de": "Der PM1-Wert hat sich geändert",
+          "es": "El valor de PM1 ha cambiado",
+          "fr": "La valeur du PM1 a changé",
+          "it": "Il valore PM1 è cambiato",
+          "no": "PM1-verdien har endret seg",
+          "sv": "PM1-värdet har ändrats",
+          "pl": "Wartość PM1 uległa zmianie",
+          "ru": "Значение PM1 изменилось",
+          "ko": "PM1 값이 변경되었습니다"
         },
         "args": [
           {
@@ -148,7 +467,18 @@
           {
             "name": "measure_pm1",
             "title": {
-              "en": "PM1"
+              "en": "PM1",
+              "nl": "PM1",
+              "da": "PM1",
+              "de": "PM1",
+              "es": "PM1",
+              "fr": "PM1",
+              "it": "PM1",
+              "no": "PM1",
+              "sv": "PM1",
+              "pl": "PM1",
+              "ru": "PM1",
+              "ko": "PM1"
             },
             "type": "number",
             "example": 2
@@ -158,10 +488,32 @@
       {
         "id": "measure_pm10_changed",
         "title": {
-          "en": "The PM10 value has changed"
+          "en": "The PM10 value has changed",
+          "nl": "De PM10-waarde is veranderd",
+          "da": "PM10-værdien er ændret",
+          "de": "Der PM10-Wert hat sich geändert",
+          "es": "El valor de PM10 ha cambiado",
+          "fr": "La valeur de PM10 a changé",
+          "it": "Il valore PM10 è cambiato",
+          "no": "PM10-verdien har endret seg",
+          "sv": "PM10-värdet har ändrats",
+          "pl": "Wartość PM10 uległa zmianie",
+          "ru": "Значение PM10 изменилось",
+          "ko": "PM10 값이 변경되었습니다."
         },
         "titleFormatted": {
-          "en": "The PM10 value has changed"
+          "en": "The PM10 value has changed",
+          "nl": "De PM10-waarde is veranderd",
+          "da": "PM10-værdien er ændret",
+          "de": "Der PM10-Wert hat sich geändert",
+          "es": "El valor de PM10 ha cambiado",
+          "fr": "La valeur de PM10 a changé",
+          "it": "Il valore PM10 è cambiato",
+          "no": "PM10-verdien har endret seg",
+          "sv": "PM10-värdet har ändrats",
+          "pl": "Wartość PM10 uległa zmianie",
+          "ru": "Значение PM10 изменилось",
+          "ko": "PM10 값이 변경되었습니다."
         },
         "args": [
           {
@@ -174,7 +526,18 @@
           {
             "name": "measure_pm10",
             "title": {
-              "en": "PM10"
+              "en": "PM10",
+              "nl": "PM10",
+              "da": "PM10",
+              "de": "PM10",
+              "es": "PM10",
+              "fr": "PM10",
+              "it": "PM10",
+              "no": "PM10",
+              "sv": "PM10",
+              "pl": "PM10",
+              "ru": "PM10",
+              "ko": "PM10"
             },
             "type": "number",
             "example": 2
@@ -184,10 +547,32 @@
       {
         "id": "measure_voc_changed",
         "title": {
-          "en": "The VOC value has changed"
+          "en": "The VOC value has changed",
+          "nl": "De VOC-waarde is veranderd",
+          "da": "VOC-værdien er ændret",
+          "de": "Der VOC-Wert hat sich geändert",
+          "es": "El valor de VOC ha cambiado",
+          "fr": "La valeur de COV a changé",
+          "it": "Il valore VOC è cambiato",
+          "no": "VOC-verdien har endret seg",
+          "sv": "VOC-värdet har ändrats",
+          "pl": "Wartość VOC uległa zmianie",
+          "ru": "Значение VOC изменилось",
+          "ko": "VOC 값이 변경되었습니다"
         },
         "titleFormatted": {
-          "en": "The VOC value has changed"
+          "en": "The VOC value has changed",
+          "nl": "De VOC-waarde is veranderd",
+          "da": "VOC-værdien er ændret",
+          "de": "Der VOC-Wert hat sich geändert",
+          "es": "El valor de VOC ha cambiado",
+          "fr": "La valeur de COV a changé",
+          "it": "Il valore VOC è cambiato",
+          "no": "VOC-verdien har endret seg",
+          "sv": "VOC-värdet har ändrats",
+          "pl": "Wartość VOC uległa zmianie",
+          "ru": "Значение VOC изменилось",
+          "ko": "VOC 값이 변경되었습니다"
         },
         "args": [
           {
@@ -200,7 +585,18 @@
           {
             "name": "measure_voc",
             "title": {
-              "en": "VOC"
+              "en": "VOC",
+              "nl": "VOC",
+              "da": "VOC",
+              "de": "VOC",
+              "es": "VOC",
+              "fr": "VOC",
+              "it": "VOC",
+              "no": "VOC",
+              "sv": "VOC",
+              "pl": "VOC",
+              "ru": "VOC",
+              "ko": "VOC"
             },
             "type": "number",
             "example": 2
@@ -210,10 +606,32 @@
       {
         "id": "measure_voc_idx_changed",
         "title": {
-          "en": "The VOC Index value has changed"
+          "en": "The VOC Index value has changed",
+          "nl": "De VOC-indexwaarde is veranderd",
+          "da": "VOC-indeksværdien er ændret",
+          "de": "Der VOC-Indexwert hat sich geändert",
+          "es": "El valor del índice VOC ha cambiado",
+          "fr": "La valeur de l'indice VOC a changé",
+          "it": "Il valore dell'indice VOC è cambiato",
+          "no": "VOC-indeksverdien har endret seg",
+          "sv": "VOC-indexvärdet har ändrats",
+          "pl": "Wartość wskaźnika VOC uległa zmianie",
+          "ru": "Значение индекса VOC изменилось",
+          "ko": "VOC 지수 값이 변경되었습니다"
         },
         "titleFormatted": {
-          "en": "The VOC Index value has changed"
+          "en": "The VOC Index value has changed",
+          "nl": "De VOC-indexwaarde is veranderd",
+          "da": "VOC-indeksværdien er ændret",
+          "de": "Der VOC-Indexwert hat sich geändert",
+          "es": "El valor del índice VOC ha cambiado",
+          "fr": "La valeur de l'indice VOC a changé",
+          "it": "Il valore dell'indice VOC è cambiato",
+          "no": "VOC-indeksverdien har endret seg",
+          "sv": "VOC-indexvärdet har ändrats",
+          "pl": "Wartość wskaźnika VOC uległa zmianie",
+          "ru": "Значение индекса VOC изменилось",
+          "ko": "VOC 지수 값이 변경되었습니다"
         },
         "args": [
           {
@@ -226,7 +644,18 @@
           {
             "name": "measure_voc_idx",
             "title": {
-              "en": "VOC Index"
+              "en": "VOC Index",
+              "nl": "VOC-index",
+              "da": "VOC-indeks",
+              "de": "VOC-Index",
+              "es": "Índice de VOC",
+              "fr": "Indice de VOC",
+              "it": "Indice VOC",
+              "no": "VOC-indeks",
+              "sv": "VOC-index",
+              "pl": "Wskaźnik VOC",
+              "ru": "Индекс VOC",
+              "ko": "VOC 지수"
             },
             "type": "number",
             "example": 2
@@ -238,7 +667,18 @@
   "drivers": [
     {
       "name": {
-        "en": "Indoor Monitor"
+        "en": "Indoor Monitor",
+        "nl": "Binnenmonitor",
+        "da": "Indendørs Monitor",
+        "de": "Innenmonitor",
+        "es": "Monitor Interior",
+        "fr": "Moniteur Intérieur",
+        "it": "Monitor Interno",
+        "no": "Innendørs Monitor",
+        "sv": "Inomhus Monitor",
+        "pl": "Monitor Wewnętrzny",
+        "ru": "Внутренний Монитор",
+        "ko": "실내 모니터"
       },
       "class": "sensor",
       "capabilities": [
@@ -285,14 +725,36 @@
         {
           "type": "group",
           "label": {
-            "en": "Device Settings"
+            "en": "Device Settings",
+            "nl": "Apparaatinstellingen",
+            "da": "Enhedsindstillinger",
+            "de": "Geräteeinstellungen",
+            "es": "Configuración del dispositivo",
+            "fr": "Paramètres de l'appareil",
+            "it": "Impostazioni del dispositivo",
+            "no": "Enhetsinnstillinger",
+            "sv": "Enhetsinställningar",
+            "pl": "Ustawienia urządzeń",
+            "ru": "Настройки устройства",
+            "ko": "기기 설정"
           },
           "children": [
             {
               "id": "ipAddress",
               "type": "text",
               "label": {
-                "en": "IP Address"
+                "en": "IP Address",
+                "nl": "IP-adres",
+                "da": "IP-adresse",
+                "de": "IP-Adresse",
+                "es": "Dirección IP",
+                "fr": "Adresse IP",
+                "it": "Indirizzo IP",
+                "no": "IP-adresse",
+                "sv": "IP-adress",
+                "pl": "Adres IP",
+                "ru": "IP адрес",
+                "ko": "IP 주소"
               },
               "value": ""
             },
@@ -300,38 +762,104 @@
               "id": "pollingInterval",
               "type": "dropdown",
               "label": {
-                "en": "Polling Interval"
+                "en": "Polling Interval",
+                "nl": "Polling-interval",
+                "da": "Polling-interval",
+                "de": "Abfrageintervall",
+                "es": "Intervalo de sondeo",
+                "fr": "Intervalle de sondage",
+                "it": "Intervallo di polling",
+                "no": "Polling-intervall",
+                "sv": "Pollingintervall",
+                "pl": "Interwał sondowania",
+                "ru": "Интервал опроса",
+                "ko": "폴링 간격"
               },
               "value": "60000",
               "values": [
                 {
                   "id": "15000",
                   "label": {
-                    "en": "15 Seconds"
+                    "en": "15 Seconds",
+                    "nl": "15 seconden",
+                    "da": "15 sekunder",
+                    "de": "15 Sekunden",
+                    "es": "15 segundos",
+                    "fr": "15 secondes",
+                    "it": "15 secondi",
+                    "no": "15 sekunder",
+                    "sv": "15 sekunder",
+                    "pl": "15 sekund",
+                    "ru": "15 секунд",
+                    "ko": "15초"
                   }
                 },
                 {
                   "id": "30000",
                   "label": {
-                    "en": "30 Seconds"
+                    "en": "30 Seconds",
+                    "nl": "30 seconden",
+                    "da": "30 sekunder",
+                    "de": "30 Sekunden",
+                    "es": "30 segundos",
+                    "fr": "30 secondes",
+                    "it": "30 secondi",
+                    "no": "30 sekunder",
+                    "sv": "30 sekunder",
+                    "pl": "30 sekund",
+                    "ru": "30 секунд",
+                    "ko": "30초"
                   }
                 },
                 {
                   "id": "60000",
                   "label": {
-                    "en": "1 Minute"
+                    "en": "1 Minute",
+                    "nl": "1 minuut",
+                    "da": "1 minut",
+                    "de": "1 Minute",
+                    "es": "1 minuto",
+                    "fr": "1 minute",
+                    "it": "1 minuto",
+                    "no": "1 minutt",
+                    "sv": "1 minut",
+                    "pl": "1 minuta",
+                    "ru": "1 минута",
+                    "ko": "1분"
                   }
                 },
                 {
                   "id": "120000",
                   "label": {
-                    "en": "2 Minutes"
+                    "en": "2 Minutes",
+                    "nl": "2 minuten",
+                    "da": "2 minutter",
+                    "de": "2 Minuten",
+                    "es": "2 minutos",
+                    "fr": "2 minutes",
+                    "it": "2 minuti",
+                    "no": "2 minutter",
+                    "sv": "2 minuter",
+                    "pl": "2 minuty",
+                    "ru": "2 минуты",
+                    "ko": "2분"
                   }
                 },
                 {
                   "id": "300000",
                   "label": {
-                    "en": "5 Minutes"
+                    "en": "5 Minutes",
+                    "nl": "5 minuten",
+                    "da": "5 minutter",
+                    "de": "5 Minuten",
+                    "es": "5 minutos",
+                    "fr": "5 minutes",
+                    "it": "5 minuti",
+                    "no": "5 minutter",
+                    "sv": "5 minuter",
+                    "pl": "5 minut",
+                    "ru": "5 минут",
+                    "ko": "5분"
                   }
                 }
               ]
@@ -341,7 +869,18 @@
               "type": "checkbox",
               "value": true,
               "label": {
-                "en": "Post Data To AirGradient"
+                "en": "Post Data To AirGradient",
+                "nl": "Post gegevens naar AirGradient",
+                "da": "Post data til AirGradient",
+                "de": "Daten an AirGradient senden",
+                "es": "Enviar datos a AirGradient",
+                "fr": "Envoyer les données à AirGradient",
+                "it": "Invia dati a AirGradient",
+                "no": "Post data til AirGradient",
+                "sv": "Skicka data till AirGradient",
+                "pl": "Wyślij dane do AirGradient",
+                "ru": "Отправить данные в AirGradient",
+                "ko": "AirGradient에 데이터 전송"
               }
             },
             {
@@ -349,13 +888,35 @@
               "type": "checkbox",
               "value": true,
               "label": {
-                "en": "PM 2.5 uses Corrected Value"
+                "en": "PM 2.5 uses Corrected Value",
+                "nl": "PM 2,5 gebruikt gecorrigeerde waarde",
+                "da": "PM 2,5 bruger korrigeret værdi",
+                "de": "PM 2.5 verwendet den korrigierten Wert",
+                "es": "PM 2.5 usa valor corregido",
+                "fr": "PM 2.5 utilise la valeur corrigée",
+                "it": "PM 2,5 utilizza il valore corretto",
+                "no": "PM 2,5 bruker korrigert verdi",
+                "sv": "PM 2,5 använder korrigerat värde",
+                "pl": "PM 2,5 używa wartości skorygowanej",
+                "ru": "PM 2.5 использует исправленные значения",
+                "ko": "PM 2.5 수정된 값 사용"
               }
             },
             {
               "id": "co2CalibrationRequested",
               "label": {
-                "en": "Request CO2 Calibration"
+                "en": "Request CO2 Calibration",
+                "nl": "Vraag CO2-calibratie aan",
+                "da": "Anmod om CO2-kalibrering",
+                "de": "CO2-Kalibrierung anfordern",
+                "es": "Solicitar calibración de CO2",
+                "fr": "Demander l'étalonnage du CO2",
+                "it": "Richiedi la calibrazione del CO2",
+                "no": "Be om CO2-kalibrering",
+                "sv": "Begär CO2-kalibrering",
+                "pl": "Poproś o kalibrację CO2",
+                "ru": "Запрос калибровки CO2",
+                "ko": "CO2 보정 요청"
               },
               "type": "checkbox",
               "value": false
@@ -365,14 +926,36 @@
         {
           "type": "group",
           "label": {
-            "en": "Information"
+            "en": "Information",
+            "nl": "Informatie",
+            "da": "Information",
+            "de": "Information",
+            "es": "Información",
+            "fr": "Information",
+            "it": "Informazione",
+            "no": "Informasjon",
+            "sv": "Information",
+            "pl": "Informacja",
+            "ru": "Информация",
+            "ko": "정보"
           },
           "children": [
             {
               "id": "serialno",
               "type": "label",
               "label": {
-                "en": "Serial No"
+                "en": "Serial No",
+                "nl": "Serienummer",
+                "da": "Serienummer",
+                "de": "Seriennummer",
+                "es": "Número de serie",
+                "fr": "Numéro de série",
+                "it": "Numero di serie",
+                "no": "Serienummer",
+                "sv": "Serienummer",
+                "pl": "Numer seryjny",
+                "ru": "Серийный номер",
+                "ko": "일련번호"
               },
               "value": ""
             },
@@ -380,7 +963,18 @@
               "id": "firmware",
               "type": "label",
               "label": {
-                "en": "Firmware"
+                "en": "Firmware",
+                "nl": "Firmware",
+                "da": "Firmware",
+                "de": "Firmware",
+                "es": "Firmware",
+                "fr": "Firmware",
+                "it": "Firmware",
+                "no": "Firmware",
+                "sv": "Firmware",
+                "pl": "Oprogramowanie sprzętowe",
+                "ru": "Прошивка",
+                "ko": "펌웨어"
               },
               "value": ""
             },
@@ -388,7 +982,18 @@
               "id": "model",
               "type": "label",
               "label": {
-                "en": "Model"
+                "en": "Model",
+                "nl": "Model",
+                "da": "Model",
+                "de": "Modell",
+                "es": "Modelo",
+                "fr": "Modèle",
+                "it": "Modello",
+                "no": "Modell",
+                "sv": "Modell",
+                "pl": "Model",
+                "ru": "Модель",
+                "ko": "모델"
               },
               "value": ""
             }
@@ -398,7 +1003,18 @@
     },
     {
       "name": {
-        "en": "Outdoor Monitor"
+        "en": "Outdoor Monitor",
+        "nl": "Buitenmonitor",
+        "da": "Udendørs skærm",
+        "de": "Außenmonitor",
+        "es": "Monitor Exterior",
+        "fr": "Moniteur Extérieur",
+        "it": "Monitor Esterno",
+        "no": "Utemonitor",
+        "sv": "Utomhusmonitor",
+        "pl": "Monitor Zewnętrzny",
+        "ru": "Наружный монитор",
+        "ko": "실외 모니터"
       },
       "class": "sensor",
       "capabilities": [
@@ -445,14 +1061,36 @@
         {
           "type": "group",
           "label": {
-            "en": "Device Settings"
+            "en": "Device Settings",
+            "nl": "Apparaatinstellingen",
+            "da": "Enhedsindstillinger",
+            "de": "Geräteeinstellungen",
+            "es": "Configuración del Dispositivo",
+            "fr": "Paramètres de l'Appareil",
+            "it": "Impostazioni del Dispositivo",
+            "no": "Enhetsinnstillinger",
+            "sv": "Enhetsinställningar",
+            "pl": "Ustawienia Urządzenia",
+            "ru": "Настройки устройства",
+            "ko": "장치 설정"
           },
           "children": [
             {
               "id": "ipAddress",
               "type": "text",
               "label": {
-                "en": "IP Address"
+                "en": "IP Address",
+                "nl": "IP-adres",
+                "da": "IP-adresse",
+                "de": "IP-Adresse",
+                "es": "Dirección IP",
+                "fr": "Adresse IP",
+                "it": "Indirizzo IP",
+                "no": "IP-adresse",
+                "sv": "IP-adress",
+                "pl": "Adres IP",
+                "ru": "IP-адрес",
+                "ko": "IP 주소"
               },
               "value": ""
             },
@@ -460,38 +1098,104 @@
               "id": "pollingInterval",
               "type": "dropdown",
               "label": {
-                "en": "Polling Interval"
+                "en": "Polling Interval",
+                "nl": "Peilinginterval",
+                "da": "Afstemningsinterval",
+                "de": "Abrufintervall",
+                "es": "Intervalo de sondeo",
+                "fr": "Intervalle de sondage",
+                "it": "Intervallo di polling",
+                "no": "Avstemningsintervall",
+                "sv": "Pollningsintervall",
+                "pl": "Interwał odpytywania",
+                "ru": "Интервал опроса",
+                "ko": "폴링 간격"
               },
               "value": "60000",
               "values": [
                 {
                   "id": "15000",
                   "label": {
-                    "en": "15 Seconds"
+                    "en": "15 Seconds",
+                    "nl": "15 seconden",
+                    "da": "15 sekunder",
+                    "de": "15 Sekunden",
+                    "es": "15 Segundos",
+                    "fr": "15 secondes",
+                    "it": "15 secondi",
+                    "no": "15 sekunder",
+                    "sv": "15 sekunder",
+                    "pl": "15 sekund",
+                    "ru": "15 секунд",
+                    "ko": "15초"
                   }
                 },
                 {
                   "id": "30000",
                   "label": {
-                    "en": "30 Seconds"
+                    "en": "30 Seconds",
+                    "nl": "30 seconden",
+                    "da": "30 sekunder",
+                    "de": "30 Sekunden",
+                    "es": "30 Segundos",
+                    "fr": "30 secondes",
+                    "it": "30 secondi",
+                    "no": "30 sekunder",
+                    "sv": "30 sekunder",
+                    "pl": "30 sekund",
+                    "ru": "30 секунд",
+                    "ko": "30초"
                   }
                 },
                 {
                   "id": "60000",
                   "label": {
-                    "en": "1 Minute"
+                    "en": "1 Minute",
+                    "nl": "1 minuut",
+                    "da": "1 minut",
+                    "de": "1 Minute",
+                    "es": "1 Minuto",
+                    "fr": "1 minute",
+                    "it": "1 minuto",
+                    "no": "1 minutt",
+                    "sv": "1 minut",
+                    "pl": "1 minuta",
+                    "ru": "1 минута",
+                    "ko": "1분"
                   }
                 },
                 {
                   "id": "120000",
                   "label": {
-                    "en": "2 Minutes"
+                    "en": "2 Minutes",
+                    "nl": "2 minuten",
+                    "da": "2 minutter",
+                    "de": "2 Minuten",
+                    "es": "2 Minutos",
+                    "fr": "2 minutes",
+                    "it": "2 minuti",
+                    "no": "2 minutter",
+                    "sv": "2 minuter",
+                    "pl": "2 minuty",
+                    "ru": "2 минуты",
+                    "ko": "2분"
                   }
                 },
                 {
                   "id": "300000",
                   "label": {
-                    "en": "5 Minutes"
+                    "en": "5 Minutes",
+                    "nl": "5 minuten",
+                    "da": "5 minutter",
+                    "de": "5 Minuten",
+                    "es": "5 Minutos",
+                    "fr": "5 minutes",
+                    "it": "5 minuti",
+                    "no": "5 minutter",
+                    "sv": "5 minuter",
+                    "pl": "5 minut",
+                    "ru": "5 минут",
+                    "ko": "5분"
                   }
                 }
               ]
@@ -499,7 +1203,18 @@
             {
               "id": "postDataToAirGradient",
               "label": {
-                "en": "Post Data To AirGradient"
+                "en": "Post Data To AirGradient",
+                "nl": "Post gegevens naar AirGradient",
+                "da": "Send data til AirGradient",
+                "de": "Daten an AirGradient senden",
+                "es": "Enviar datos a AirGradient",
+                "fr": "Envoyer des données à AirGradient",
+                "it": "Pubblica dati su AirGradient",
+                "no": "Post data til AirGradient",
+                "sv": "Skicka data till AirGradient",
+                "pl": "Publikuj dane do AirGradient",
+                "ru": "Отправить данные в AirGradient",
+                "ko": "AirGradient에 데이터 게시"
               },
               "type": "checkbox",
               "value": true
@@ -507,7 +1222,18 @@
             {
               "id": "co2CalibrationRequested",
               "label": {
-                "en": "Request CO2 Calibration"
+                "en": "Request CO2 Calibration",
+                "nl": "Vraag CO2-calibratie aan",
+                "da": "Anmod om CO2-kalibrering",
+                "de": "CO2-Kalibrierung anfordern",
+                "es": "Solicitar calibración de CO2",
+                "fr": "Demander l'étalonnage du CO2",
+                "it": "Richiedi calibrazione CO2",
+                "no": "Be om CO2-kalibrering",
+                "sv": "Begär CO2-kalibrering",
+                "pl": "Zażądaj kalibracji CO2",
+                "ru": "Запросить калибровку CO2",
+                "ko": "CO2 보정 요청"
               },
               "type": "checkbox",
               "value": true
@@ -517,14 +1243,36 @@
         {
           "type": "group",
           "label": {
-            "en": "Information"
+            "en": "Information",
+            "nl": "Informatie",
+            "da": "Information",
+            "de": "Information",
+            "es": "Información",
+            "fr": "Information",
+            "it": "Informazioni",
+            "no": "Informasjon",
+            "sv": "Information",
+            "pl": "Informacja",
+            "ru": "Информация",
+            "ko": "정보"
           },
           "children": [
             {
               "id": "serialno",
               "type": "label",
               "label": {
-                "en": "Serial No"
+                "en": "Serial No",
+                "nl": "Serienummer",
+                "da": "Serienummer",
+                "de": "Seriennummer",
+                "es": "Número de serie",
+                "fr": "Numéro de série",
+                "it": "Numero seriale",
+                "no": "Serienummer",
+                "sv": "Serienummer",
+                "pl": "Numer seryjny",
+                "ru": "Серийный номер",
+                "ko": "일련 번호"
               },
               "value": ""
             },
@@ -532,7 +1280,18 @@
               "id": "firmware",
               "type": "label",
               "label": {
-                "en": "Firmware"
+                "en": "Firmware",
+                "nl": "Firmware",
+                "da": "Firmware",
+                "de": "Firmware",
+                "es": "Firmware",
+                "fr": "Micrologiciel",
+                "it": "Firmware",
+                "no": "Firmware",
+                "sv": "Firmware",
+                "pl": "Oprogramowanie sprzętowe",
+                "ru": "Прошивка",
+                "ko": "펌웨어"
               },
               "value": ""
             },
@@ -540,7 +1299,18 @@
               "id": "model",
               "type": "label",
               "label": {
-                "en": "Model"
+                "en": "Model",
+                "nl": "Model",
+                "da": "Model",
+                "de": "Modell",
+                "es": "Modelo",
+                "fr": "Modèle",
+                "it": "Modello",
+                "no": "Modell",
+                "sv": "Modell",
+                "pl": "Model",
+                "ru": "Модель",
+                "ko": "모델"
               },
               "value": ""
             }
@@ -553,10 +1323,32 @@
     "measure_nox": {
       "type": "number",
       "title": {
-        "en": "NOx"
+        "en": "NOx",
+        "nl": "NOx",
+        "da": "NOx",
+        "de": "NOx",
+        "es": "NOx",
+        "fr": "NOx",
+        "it": "NOx",
+        "no": "NOx",
+        "sv": "NOx",
+        "pl": "NOx",
+        "ru": "NOx",
+        "ko": "NOx"
       },
       "units": {
-        "en": "ticks"
+        "en": "ticks",
+        "nl": "tikken",
+        "da": "tællinger",
+        "de": "Ticks",
+        "es": "clics",
+        "fr": "coups",
+        "it": "ticchetti",
+        "no": "tikk",
+        "sv": "tikk",
+        "pl": "tyknięcia",
+        "ru": "тики",
+        "ko": "틱"
       },
       "decimals": 0,
       "getable": true,
@@ -568,10 +1360,32 @@
     "measure_nox_idx": {
       "type": "number",
       "title": {
-        "en": "NOx Index"
+        "en": "NOx Index",
+        "nl": "NOx Index",
+        "da": "NOx Indeks",
+        "de": "NOx Index",
+        "es": "Índice NOx",
+        "fr": "Indice NOx",
+        "it": "Indice NOx",
+        "no": "NOx Indeks",
+        "sv": "NOx Index",
+        "pl": "Indeks NOx",
+        "ru": "Индекс NOx",
+        "ko": "NOx 지수"
       },
       "units": {
-        "en": "idx"
+        "en": "idx",
+        "nl": "idx",
+        "da": "idx",
+        "de": "idx",
+        "es": "idx",
+        "fr": "idx",
+        "it": "idx",
+        "no": "idx",
+        "sv": "idx",
+        "pl": "idx",
+        "ru": "idx",
+        "ko": "idx"
       },
       "decimals": 0,
       "getable": true,
@@ -583,7 +1397,18 @@
     "measure_pm03_cnt": {
       "type": "number",
       "title": {
-        "en": "PM0.3 Count"
+        "en": "PM0.3 Count",
+        "nl": "PM0.3 Telling",
+        "da": "PM0.3 Antal",
+        "de": "PM0.3 Anzahl",
+        "es": "Recuento PM0.3",
+        "fr": "Compte PM0.3",
+        "it": "Conteggio PM0.3",
+        "no": "PM0.3 Antall",
+        "sv": "PM0.3 Antal",
+        "pl": "Licznik PM0.3",
+        "ru": "Подсчет PM0.3",
+        "ko": "PM0.3 개수"
       },
       "decimals": 0,
       "getable": true,
@@ -595,10 +1420,32 @@
     "measure_pm1": {
       "type": "number",
       "title": {
-        "en": "PM1"
+        "en": "PM1",
+        "nl": "PM1",
+        "da": "PM1",
+        "de": "PM1",
+        "es": "PM1",
+        "fr": "PM1",
+        "it": "PM1",
+        "no": "PM1",
+        "sv": "PM1",
+        "pl": "PM1",
+        "ru": "PM1",
+        "ko": "PM1"
       },
       "units": {
-        "en": "µg/m³"
+        "en": "µg/m³",
+        "nl": "µg/m³",
+        "da": "µg/m³",
+        "de": "µg/m³",
+        "es": "µg/m³",
+        "fr": "µg/m³",
+        "it": "µg/m³",
+        "no": "µg/m³",
+        "sv": "µg/m³",
+        "pl": "µg/m³",
+        "ru": "µg/m³",
+        "ko": "µg/m³"
       },
       "decimals": 3,
       "getable": true,
@@ -610,10 +1457,32 @@
     "measure_pm10": {
       "type": "number",
       "title": {
-        "en": "PM10"
+        "en": "PM10",
+        "nl": "PM10",
+        "da": "PM10",
+        "de": "PM10",
+        "es": "PM10",
+        "fr": "PM10",
+        "it": "PM10",
+        "no": "PM10",
+        "sv": "PM10",
+        "pl": "PM10",
+        "ru": "PM10",
+        "ko": "PM10"
       },
       "units": {
-        "en": "µg/m³"
+        "en": "µg/m³",
+        "nl": "µg/m³",
+        "da": "µg/m³",
+        "de": "µg/m³",
+        "es": "µg/m³",
+        "fr": "µg/m³",
+        "it": "µg/m³",
+        "no": "µg/m³",
+        "sv": "µg/m³",
+        "pl": "µg/m³",
+        "ru": "µg/m³",
+        "ko": "µg/m³"
       },
       "decimals": 3,
       "getable": true,
@@ -625,10 +1494,32 @@
     "measure_voc": {
       "type": "number",
       "title": {
-        "en": "VOC"
+        "en": "VOC",
+        "nl": "VOC",
+        "da": "VOC",
+        "de": "VOC",
+        "es": "VOC",
+        "fr": "VOC",
+        "it": "VOC",
+        "no": "VOC",
+        "sv": "VOC",
+        "pl": "VOC",
+        "ru": "VOC",
+        "ko": "VOC"
       },
       "units": {
-        "en": "ticks"
+        "en": "ticks",
+        "nl": "tikken",
+        "da": "tællinger",
+        "de": "Zähler",
+        "es": "tics",
+        "fr": "tics",
+        "it": "tic",
+        "no": "tikk",
+        "sv": "tick",
+        "pl": "tyka",
+        "ru": "щелчки",
+        "ko": "틱"
       },
       "decimals": 2,
       "getable": true,
@@ -640,10 +1531,32 @@
     "measure_voc_idx": {
       "type": "number",
       "title": {
-        "en": "VOC Index"
+        "en": "VOC Index",
+        "nl": "VOC-index",
+        "da": "VOC-indeks",
+        "de": "VOC-Index",
+        "es": "Índice de COV",
+        "fr": "Indice COV",
+        "it": "Indice VOC",
+        "no": "VOC-indeks",
+        "sv": "VOC-index",
+        "pl": "Indeks VOC",
+        "ru": "Индекс ЛОС",
+        "ko": "VOC 지수"
       },
       "units": {
-        "en": "idx"
+        "en": "idx",
+        "nl": "idx",
+        "da": "idx",
+        "de": "idx",
+        "es": "idx",
+        "fr": "idx",
+        "it": "idx",
+        "no": "idx",
+        "sv": "idx",
+        "pl": "idx",
+        "ru": "idx",
+        "ko": "idx"
       },
       "decimals": 0,
       "getable": true,

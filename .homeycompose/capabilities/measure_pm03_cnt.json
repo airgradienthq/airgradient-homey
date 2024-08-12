@@ -1,12 +1,23 @@
 {
-	"type": "number",
-	"title": {
-		"en": "PM0.3 Count"
-	},
-	"decimals": 0,
-	"getable": true,
-	"setable": false,
-	"insights": true,
-	"uiComponent": "sensor",
-	"icon": "./assets/measure_pm0.3.svg"
+  "type": "number",
+  "title": {
+    "en": "PM0.3 Count",
+    "nl": "PM0.3 Telling",
+    "da": "PM0.3 Antal",
+    "de": "PM0.3 Anzahl",
+    "es": "Recuento PM0.3",
+    "fr": "Compte PM0.3",
+    "it": "Conteggio PM0.3",
+    "no": "PM0.3 Antall",
+    "sv": "PM0.3 Antal",
+    "pl": "Licznik PM0.3",
+    "ru": "Подсчет PM0.3",
+    "ko": "PM0.3 개수"
+  },
+  "decimals": 0,
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "icon": "./assets/measure_pm0.3.svg"
 }

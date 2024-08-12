@@ -25,5 +25,8 @@
   },
   "1.1.0": {
     "en": "Cleaned up code. Ready for release!"
+  },
+  "1.1.1": {
+    "en": "Support for lots of languages"
   }
 }

@@ -1,15 +1,37 @@
 {
-	"type": "number",
-	"title": {
-		"en": "VOC Index"
-	},
-	"units": {
-		"en": "idx"
-	  },
-	"decimals": 0,
-	"getable": true,
-	"setable": false,
-	"insights": true,
-	"uiComponent": "sensor",
-	"icon": "./assets/measure_tvoc.svg"
+  "type": "number",
+  "title": {
+    "en": "VOC Index",
+    "nl": "VOC-index",
+    "da": "VOC-indeks",
+    "de": "VOC-Index",
+    "es": "Índice de COV",
+    "fr": "Indice COV",
+    "it": "Indice VOC",
+    "no": "VOC-indeks",
+    "sv": "VOC-index",
+    "pl": "Indeks VOC",
+    "ru": "Индекс ЛОС",
+    "ko": "VOC 지수"
+  },
+  "units": {
+    "en": "idx",
+    "nl": "idx",
+    "da": "idx",
+    "de": "idx",
+    "es": "idx",
+    "fr": "idx",
+    "it": "idx",
+    "no": "idx",
+    "sv": "idx",
+    "pl": "idx",
+    "ru": "idx",
+    "ko": "idx"
+  },
+  "decimals": 0,
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "icon": "./assets/measure_tvoc.svg"
 }

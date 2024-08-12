@@ -1,0 +1,14 @@
+{
+  "save": "Opprett enhet",
+  "saving": "Verifiserer enhet",
+  "settings": {
+    "title": "Applikasjonsinnstillinger",
+    "saved": "Innstillinger er nå lagret."
+  },
+  "device": {
+    "create": "Koble til en AirGradient-enhet",
+    "ipAddress": "Enhetens IP-adresse",
+    "ipAddressHelp": "Dette er den unike IP-adressen til din AirGradient-enhet.",
+    "ipAddressRequired": "Vennligst oppgi IP-adressen til din AirGradient-enhet."
+  }
+}

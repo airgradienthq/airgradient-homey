@@ -1,6 +1,17 @@
 {
   "name": {
-    "en": "Indoor Monitor"
+    "en": "Indoor Monitor",
+    "nl": "Binnenmonitor",
+    "da": "Indendørs Monitor",
+    "de": "Innenmonitor",
+    "es": "Monitor Interior",
+    "fr": "Moniteur Intérieur",
+    "it": "Monitor Interno",
+    "no": "Innendørs Monitor",
+    "sv": "Inomhus Monitor",
+    "pl": "Monitor Wewnętrzny",
+    "ru": "Внутренний Монитор",
+    "ko": "실내 모니터"
   },
   "class": "sensor",
   "capabilities": [

@@ -1,0 +1,14 @@
+{
+  "save": "Créer un appareil",
+  "saving": "Vérification de l'appareil",
+  "settings": {
+    "title": "Paramètres de l'application",
+    "saved": "Les paramètres ont été enregistrés."
+  },
+  "device": {
+    "create": "Se connecter à un appareil AirGradient",
+    "ipAddress": "Adresse IP de l'appareil",
+    "ipAddressHelp": "C'est l'adresse IP unique de votre appareil AirGradient.",
+    "ipAddressRequired": "Veuillez fournir l'adresse IP de votre appareil AirGradient."
+  }
+}

@@ -1,27 +1,59 @@
-
 {
-    "id": "measure_pm03_cnt_changed",
-    "title": {
-        "en": "The PM0.3 Count value has changed"
-    },
-    "titleFormatted": {
-        "en": "The PM0.3 Count value has changed"
-    },
-    "args": [
-        {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=indoor|outdoor"
-        }
-    ],
-    "tokens": [
-        {
-            "name": "measure_pm03_cnt",
-            "title": {
-                "en": "PM0.3 Count"
-            },
-            "type": "number",
-            "example": 2
-        }
-    ]
+  "id": "measure_pm03_cnt_changed",
+  "title": {
+    "en": "The PM0.3 Count value has changed",
+    "nl": "De PM0.3-telling is gewijzigd",
+    "da": "PM0.3-tælleværdien er ændret",
+    "de": "Der PM0.3-Zählwert hat sich geändert",
+    "es": "El valor de conteo de PM0.3 ha cambiado",
+    "fr": "La valeur de comptage PM0.3 a changé",
+    "it": "Il valore di conteggio PM0.3 è cambiato",
+    "no": "PM0.3-telleverdien har endret seg",
+    "sv": "Antalet PM0.3 har ändrats",
+    "pl": "Zmieniono wartość licznika PM0.3",
+    "ru": "Изменилось значение счета PM0.3",
+    "ko": "PM0.3 카운트 값이 변경되었습니다"
+  },
+  "titleFormatted": {
+    "en": "The PM0.3 Count value has changed",
+    "nl": "De PM0.3-telling is gewijzigd",
+    "da": "PM0.3-tælleværdien er ændret",
+    "de": "Der PM0.3-Zählwert hat sich geändert",
+    "es": "El valor de conteo de PM0.3 ha cambiado",
+    "fr": "La valeur de comptage PM0.3 a changé",
+    "it": "Il valore di conteggio PM0.3 è cambiato",
+    "no": "PM0.3-telleverdien har endret seg",
+    "sv": "Antalet PM0.3 har ändrats",
+    "pl": "Zmieniono wartość licznika PM0.3",
+    "ru": "Изменилось значение счета PM0.3",
+    "ko": "PM0.3 카운트 값이 변경되었습니다"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=indoor|outdoor"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_pm03_cnt",
+      "title": {
+        "en": "PM0.3 Count",
+        "nl": "PM0.3-telling",
+        "da": "PM0.3 Tælling",
+        "de": "PM0.3 Zählung",
+        "es": "Recuento de PM0.3",
+        "fr": "Comptage PM0.3",
+        "it": "Conteggio PM0.3",
+        "no": "PM0.3-telling",
+        "sv": "PM0.3-räkning",
+        "pl": "Licznik PM0.3",
+        "ru": "Счет PM0.3",
+        "ko": "PM0.3 카운트"
+      },
+      "type": "number",
+      "example": 2
+    }
+  ]
 }

@@ -1,26 +1,59 @@
 {
-    "id": "measure_voc_idx_changed",
-    "title": {
-        "en": "The VOC Index value has changed"
-    },
-    "titleFormatted": {
-        "en": "The VOC Index value has changed"
-    },
-    "args": [
-        {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=indoor|outdoor"
-        }
-    ],
-    "tokens": [
-        {
-            "name": "measure_voc_idx",
-            "title": {
-                "en": "VOC Index"
-            },
-            "type": "number",
-            "example": 2
-        }
-    ]
+  "id": "measure_voc_idx_changed",
+  "title": {
+    "en": "The VOC Index value has changed",
+    "nl": "De VOC-indexwaarde is veranderd",
+    "da": "VOC-indeksværdien er ændret",
+    "de": "Der VOC-Indexwert hat sich geändert",
+    "es": "El valor del índice VOC ha cambiado",
+    "fr": "La valeur de l'indice VOC a changé",
+    "it": "Il valore dell'indice VOC è cambiato",
+    "no": "VOC-indeksverdien har endret seg",
+    "sv": "VOC-indexvärdet har ändrats",
+    "pl": "Wartość wskaźnika VOC uległa zmianie",
+    "ru": "Значение индекса VOC изменилось",
+    "ko": "VOC 지수 값이 변경되었습니다"
+  },
+  "titleFormatted": {
+    "en": "The VOC Index value has changed",
+    "nl": "De VOC-indexwaarde is veranderd",
+    "da": "VOC-indeksværdien er ændret",
+    "de": "Der VOC-Indexwert hat sich geändert",
+    "es": "El valor del índice VOC ha cambiado",
+    "fr": "La valeur de l'indice VOC a changé",
+    "it": "Il valore dell'indice VOC è cambiato",
+    "no": "VOC-indeksverdien har endret seg",
+    "sv": "VOC-indexvärdet har ändrats",
+    "pl": "Wartość wskaźnika VOC uległa zmianie",
+    "ru": "Значение индекса VOC изменилось",
+    "ko": "VOC 지수 값이 변경되었습니다"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=indoor|outdoor"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_voc_idx",
+      "title": {
+        "en": "VOC Index",
+        "nl": "VOC-index",
+        "da": "VOC-indeks",
+        "de": "VOC-Index",
+        "es": "Índice de VOC",
+        "fr": "Indice de VOC",
+        "it": "Indice VOC",
+        "no": "VOC-indeks",
+        "sv": "VOC-index",
+        "pl": "Wskaźnik VOC",
+        "ru": "Индекс VOC",
+        "ko": "VOC 지수"
+      },
+      "type": "number",
+      "example": 2
+    }
+  ]
 }

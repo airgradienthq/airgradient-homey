@@ -1,15 +1,37 @@
 {
-	"type": "number",
-	"title": {
-		"en": "NOx Index"
-	},
-	"units": {
-		"en": "idx"
-	  },
-	"decimals": 0,
-	"getable": true,
-	"setable": false,
-	"insights": true,
-	"uiComponent": "sensor",
-	"icon": "./assets/measure_noX.svg"
+  "type": "number",
+  "title": {
+    "en": "NOx Index",
+    "nl": "NOx Index",
+    "da": "NOx Indeks",
+    "de": "NOx Index",
+    "es": "Índice NOx",
+    "fr": "Indice NOx",
+    "it": "Indice NOx",
+    "no": "NOx Indeks",
+    "sv": "NOx Index",
+    "pl": "Indeks NOx",
+    "ru": "Индекс NOx",
+    "ko": "NOx 지수"
+  },
+  "units": {
+    "en": "idx",
+    "nl": "idx",
+    "da": "idx",
+    "de": "idx",
+    "es": "idx",
+    "fr": "idx",
+    "it": "idx",
+    "no": "idx",
+    "sv": "idx",
+    "pl": "idx",
+    "ru": "idx",
+    "ko": "idx"
+  },
+  "decimals": 0,
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "icon": "./assets/measure_noX.svg"
 }

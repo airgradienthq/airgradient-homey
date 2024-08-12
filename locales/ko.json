@@ -1,0 +1,14 @@
+{
+  "save": "기기 만들기",
+  "saving": "기기 확인 중",
+  "settings": {
+    "title": "애플리케이션 설정",
+    "saved": "설정이 저장되었습니다."
+  },
+  "device": {
+    "create": "AirGradient 기기에 연결",
+    "ipAddress": "기기의 IP 주소",
+    "ipAddressHelp": "이것은 당신의 AirGradient 기기의 고유 IP 주소입니다.",
+    "ipAddressRequired": "AirGradient 기기의 IP 주소를 입력해주세요."
+  }
+}

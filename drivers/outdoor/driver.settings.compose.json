@@ -1,106 +1,260 @@
 [
-    {
-        "type": "group",
-        "label": {
-            "en": "Device Settings"
-        },
-        "children": [
-            {
-                "id": "ipAddress",
-                "type": "text",
-                "label": {
-                    "en": "IP Address"
-                },
-                "value": ""
-            },
-            {
-                "id": "pollingInterval",
-                "type": "dropdown",
-                "label": {
-                    "en": "Polling Interval"
-                },
-                "value": "60000",
-                "values": [
-                    {
-                        "id": "15000",
-                        "label": {
-                            "en": "15 Seconds"
-                        }
-                    },
-                    {
-                        "id": "30000",
-                        "label": {
-                            "en": "30 Seconds"
-                        }
-                    },
-                    {
-                        "id": "60000",
-                        "label": {
-                            "en": "1 Minute"
-                        }
-                    },
-                    {
-                        "id": "120000",
-                        "label": {
-                            "en": "2 Minutes"
-                        }
-                    },
-                    {
-                        "id": "300000",
-                        "label": {
-                            "en": "5 Minutes"
-                        }
-                    }
-                ]
-            },
-            {
-                "id": "postDataToAirGradient",
-                "label": {
-                    "en": "Post Data To AirGradient"
-                },
-                "type": "checkbox",
-                "value": true
-            },
-            {
-                "id": "co2CalibrationRequested",
-                "label": {
-                    "en": "Request CO2 Calibration"
-                },
-                "type": "checkbox",
-                "value": true
-            }
-        ]
+  {
+    "type": "group",
+    "label": {
+      "en": "Device Settings",
+      "nl": "Apparaatinstellingen",
+      "da": "Enhedsindstillinger",
+      "de": "Geräteeinstellungen",
+      "es": "Configuración del Dispositivo",
+      "fr": "Paramètres de l'Appareil",
+      "it": "Impostazioni del Dispositivo",
+      "no": "Enhetsinnstillinger",
+      "sv": "Enhetsinställningar",
+      "pl": "Ustawienia Urządzenia",
+      "ru": "Настройки устройства",
+      "ko": "장치 설정"
     },
-    {
-        "type": "group",
+    "children": [
+      {
+        "id": "ipAddress",
+        "type": "text",
         "label": {
-            "en": "Information"
+          "en": "IP Address",
+          "nl": "IP-adres",
+          "da": "IP-adresse",
+          "de": "IP-Adresse",
+          "es": "Dirección IP",
+          "fr": "Adresse IP",
+          "it": "Indirizzo IP",
+          "no": "IP-adresse",
+          "sv": "IP-adress",
+          "pl": "Adres IP",
+          "ru": "IP-адрес",
+          "ko": "IP 주소"
         },
-        "children": [
-            {
-                "id": "serialno",
-                "type": "label",
-                "label": {
-                    "en": "Serial No"
-                },
-                "value": ""
-            },
-            {
-                "id": "firmware",
-                "type": "label",
-                "label": {
-                    "en": "Firmware"
-                },
-                "value": ""
-            },
-            {
-                "id": "model",
-                "type": "label",
-                "label": {
-                    "en": "Model"
-                },
-                "value": ""
+        "value": ""
+      },
+      {
+        "id": "pollingInterval",
+        "type": "dropdown",
+        "label": {
+          "en": "Polling Interval",
+          "nl": "Peilinginterval",
+          "da": "Afstemningsinterval",
+          "de": "Abrufintervall",
+          "es": "Intervalo de sondeo",
+          "fr": "Intervalle de sondage",
+          "it": "Intervallo di polling",
+          "no": "Avstemningsintervall",
+          "sv": "Pollningsintervall",
+          "pl": "Interwał odpytywania",
+          "ru": "Интервал опроса",
+          "ko": "폴링 간격"
+        },
+        "value": "60000",
+        "values": [
+          {
+            "id": "15000",
+            "label": {
+              "en": "15 Seconds",
+              "nl": "15 seconden",
+              "da": "15 sekunder",
+              "de": "15 Sekunden",
+              "es": "15 Segundos",
+              "fr": "15 secondes",
+              "it": "15 secondi",
+              "no": "15 sekunder",
+              "sv": "15 sekunder",
+              "pl": "15 sekund",
+              "ru": "15 секунд",
+              "ko": "15초"
             }
+          },
+          {
+            "id": "30000",
+            "label": {
+              "en": "30 Seconds",
+              "nl": "30 seconden",
+              "da": "30 sekunder",
+              "de": "30 Sekunden",
+              "es": "30 Segundos",
+              "fr": "30 secondes",
+              "it": "30 secondi",
+              "no": "30 sekunder",
+              "sv": "30 sekunder",
+              "pl": "30 sekund",
+              "ru": "30 секунд",
+              "ko": "30초"
+            }
+          },
+          {
+            "id": "60000",
+            "label": {
+              "en": "1 Minute",
+              "nl": "1 minuut",
+              "da": "1 minut",
+              "de": "1 Minute",
+              "es": "1 Minuto",
+              "fr": "1 minute",
+              "it": "1 minuto",
+              "no": "1 minutt",
+              "sv": "1 minut",
+              "pl": "1 minuta",
+              "ru": "1 минута",
+              "ko": "1분"
+            }
+          },
+          {
+            "id": "120000",
+            "label": {
+              "en": "2 Minutes",
+              "nl": "2 minuten",
+              "da": "2 minutter",
+              "de": "2 Minuten",
+              "es": "2 Minutos",
+              "fr": "2 minutes",
+              "it": "2 minuti",
+              "no": "2 minutter",
+              "sv": "2 minuter",
+              "pl": "2 minuty",
+              "ru": "2 минуты",
+              "ko": "2분"
+            }
+          },
+          {
+            "id": "300000",
+            "label": {
+              "en": "5 Minutes",
+              "nl": "5 minuten",
+              "da": "5 minutter",
+              "de": "5 Minuten",
+              "es": "5 Minutos",
+              "fr": "5 minutes",
+              "it": "5 minuti",
+              "no": "5 minutter",
+              "sv": "5 minuter",
+              "pl": "5 minut",
+              "ru": "5 минут",
+              "ko": "5분"
+            }
+          }
         ]
-    }
+      },
+      {
+        "id": "postDataToAirGradient",
+        "label": {
+          "en": "Post Data To AirGradient",
+          "nl": "Post gegevens naar AirGradient",
+          "da": "Send data til AirGradient",
+          "de": "Daten an AirGradient senden",
+          "es": "Enviar datos a AirGradient",
+          "fr": "Envoyer des données à AirGradient",
+          "it": "Pubblica dati su AirGradient",
+          "no": "Post data til AirGradient",
+          "sv": "Skicka data till AirGradient",
+          "pl": "Publikuj dane do AirGradient",
+          "ru": "Отправить данные в AirGradient",
+          "ko": "AirGradient에 데이터 게시"
+        },
+        "type": "checkbox",
+        "value": true
+      },
+      {
+        "id": "co2CalibrationRequested",
+        "label": {
+          "en": "Request CO2 Calibration",
+          "nl": "Vraag CO2-calibratie aan",
+          "da": "Anmod om CO2-kalibrering",
+          "de": "CO2-Kalibrierung anfordern",
+          "es": "Solicitar calibración de CO2",
+          "fr": "Demander l'étalonnage du CO2",
+          "it": "Richiedi calibrazione CO2",
+          "no": "Be om CO2-kalibrering",
+          "sv": "Begär CO2-kalibrering",
+          "pl": "Zażądaj kalibracji CO2",
+          "ru": "Запросить калибровку CO2",
+          "ko": "CO2 보정 요청"
+        },
+        "type": "checkbox",
+        "value": true
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Information",
+      "nl": "Informatie",
+      "da": "Information",
+      "de": "Information",
+      "es": "Información",
+      "fr": "Information",
+      "it": "Informazioni",
+      "no": "Informasjon",
+      "sv": "Information",
+      "pl": "Informacja",
+      "ru": "Информация",
+      "ko": "정보"
+    },
+    "children": [
+      {
+        "id": "serialno",
+        "type": "label",
+        "label": {
+          "en": "Serial No",
+          "nl": "Serienummer",
+          "da": "Serienummer",
+          "de": "Seriennummer",
+          "es": "Número de serie",
+          "fr": "Numéro de série",
+          "it": "Numero seriale",
+          "no": "Serienummer",
+          "sv": "Serienummer",
+          "pl": "Numer seryjny",
+          "ru": "Серийный номер",
+          "ko": "일련 번호"
+        },
+        "value": ""
+      },
+      {
+        "id": "firmware",
+        "type": "label",
+        "label": {
+          "en": "Firmware",
+          "nl": "Firmware",
+          "da": "Firmware",
+          "de": "Firmware",
+          "es": "Firmware",
+          "fr": "Micrologiciel",
+          "it": "Firmware",
+          "no": "Firmware",
+          "sv": "Firmware",
+          "pl": "Oprogramowanie sprzętowe",
+          "ru": "Прошивка",
+          "ko": "펌웨어"
+        },
+        "value": ""
+      },
+      {
+        "id": "model",
+        "type": "label",
+        "label": {
+          "en": "Model",
+          "nl": "Model",
+          "da": "Model",
+          "de": "Modell",
+          "es": "Modelo",
+          "fr": "Modèle",
+          "it": "Modello",
+          "no": "Modell",
+          "sv": "Modell",
+          "pl": "Model",
+          "ru": "Модель",
+          "ko": "모델"
+        },
+        "value": ""
+      }
+    ]
+  }
 ]

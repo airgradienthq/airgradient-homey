@@ -1,26 +1,59 @@
 {
-    "id": "measure_voc_changed",
-    "title": {
-        "en": "The VOC value has changed"
-    },
-    "titleFormatted": {
-        "en": "The VOC value has changed"
-    },
-    "args": [
-        {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=indoor|outdoor"
-        }
-    ],
-    "tokens": [
-        {
-            "name": "measure_voc",
-            "title": {
-                "en": "VOC"
-            },
-            "type": "number",
-            "example": 2
-        }
-    ]
+  "id": "measure_voc_changed",
+  "title": {
+    "en": "The VOC value has changed",
+    "nl": "De VOC-waarde is veranderd",
+    "da": "VOC-værdien er ændret",
+    "de": "Der VOC-Wert hat sich geändert",
+    "es": "El valor de VOC ha cambiado",
+    "fr": "La valeur de COV a changé",
+    "it": "Il valore VOC è cambiato",
+    "no": "VOC-verdien har endret seg",
+    "sv": "VOC-värdet har ändrats",
+    "pl": "Wartość VOC uległa zmianie",
+    "ru": "Значение VOC изменилось",
+    "ko": "VOC 값이 변경되었습니다"
+  },
+  "titleFormatted": {
+    "en": "The VOC value has changed",
+    "nl": "De VOC-waarde is veranderd",
+    "da": "VOC-værdien er ændret",
+    "de": "Der VOC-Wert hat sich geändert",
+    "es": "El valor de VOC ha cambiado",
+    "fr": "La valeur de COV a changé",
+    "it": "Il valore VOC è cambiato",
+    "no": "VOC-verdien har endret seg",
+    "sv": "VOC-värdet har ändrats",
+    "pl": "Wartość VOC uległa zmianie",
+    "ru": "Значение VOC изменилось",
+    "ko": "VOC 값이 변경되었습니다"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=indoor|outdoor"
+    }
+  ],
+  "tokens": [
+    {
+      "name": "measure_voc",
+      "title": {
+        "en": "VOC",
+        "nl": "VOC",
+        "da": "VOC",
+        "de": "VOC",
+        "es": "VOC",
+        "fr": "VOC",
+        "it": "VOC",
+        "no": "VOC",
+        "sv": "VOC",
+        "pl": "VOC",
+        "ru": "VOC",
+        "ko": "VOC"
+      },
+      "type": "number",
+      "example": 2
+    }
+  ]
 }
