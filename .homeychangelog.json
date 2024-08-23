@@ -28,5 +28,8 @@
   },
   "1.1.1": {
     "en": "Support for lots of languages"
+  },
+  "1.1.2": {
+    "en": "Fixed discovery IP address change"
   }
 }

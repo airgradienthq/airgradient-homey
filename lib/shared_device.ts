@@ -10,13 +10,32 @@ export default class SharedDevice extends Homey.Device {
         this.log("Device Init: " + this.getName() + " with pollingInterval: " + this.getSetting('pollingInterval') + " and ipAddress " + this.getSetting('ipAddress'));
 
         this.setSettings({ co2CalibrationRequested: false });
-        this.homey.setTimeout(() => {
-            this.startPolling();
-        }, this.getRandomNumber(750,1750));
+        
     }
     
     getRandomNumber(min: number, max: number): number {
         return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    onDiscoveryResult(discoveryResult: any) {
+        return discoveryResult?.txt?.serialno === this.getData().id;
+    }
+
+    async onDiscoveryAvailable(discoveryResult: any) {
+        this.setSettings({'ipAddress':discoveryResult?.address});
+        this.setAvailable();
+        this.homey.clearInterval(this.refreshInterval);
+        this.homey.setTimeout(() => {
+            this.startPolling();
+        }, this.getRandomNumber(750,1750));
+    }
+
+    onDiscoveryAddressChanged(discoveryResult: any) {
+        this.log(`onDiscoveryAddressChanged(discoveryResult:${JSON.stringify(discoveryResult)}`);
+    }
+
+    onDiscoveryLastSeenChanged(discoveryResult: any) {
+        this.log(`onDiscoveryLastSeenChanged(discoveryResult:${JSON.stringify(discoveryResult)}`);
     }
 
     async onSettings({ oldSettings, newSettings, changedKeys, }: {
@@ -63,6 +82,19 @@ export default class SharedDevice extends Homey.Device {
         }
     }
 
+
+    async safeUpdateCapabilityValue(key: string, value: any) {
+        if (this.hasCapability(key)) {
+            if (typeof value !== 'undefined' && value !== null) {
+                await this.setCapabilityValue(key, value);
+            } else {
+                this.log(`value for capability '${key}' is undefined or null`);
+            }
+        } else {
+            this.log(`missing capability: '${key}'`);
+        }
+    }
+
     async updateCapabilities() {
         const air = new AirGradient(this.getSetting('ipAddress'), this.log, SharedDevice.enableDebug);
         const aqd = await air.getAirQualityData();
@@ -71,29 +103,30 @@ export default class SharedDevice extends Homey.Device {
 
         if (aqd.status == AirGradientConnectStatus.UNREACHABLE) {
             this.setUnavailable(`Device is not reachable at ${this.getSetting('ipAddress')}`);
-            return;
+            return;            
         }
 
+        this.setAvailable();
         const config = await air.getDeviceConfig();
 
         await this.setSettings({ 'firmware': aqd.firmware });
         await this.setSettings({ 'postDataToAirGradient': config?.postDataToAirGradient });
 
-        await this.setCapabilityValue('measure_pm1', aqd.pm01);
-        await this.setCapabilityValue('measure_pm10', aqd.pm10);
-        await this.setCapabilityValue('measure_co2', aqd.rco2);
-        await this.setCapabilityValue('measure_pm03_cnt', aqd.pm003Count);
+        await this.safeUpdateCapabilityValue('measure_pm1', aqd.pm01);
+        await this.safeUpdateCapabilityValue('measure_pm10', aqd.pm10);
+        await this.safeUpdateCapabilityValue('measure_co2', aqd.rco2);
+        await this.safeUpdateCapabilityValue('measure_pm03_cnt', aqd.pm003Count);
         let pm02 = aqd.pm02;
         if (aqd.isIndoor() && this.getSetting('pm02_uses_corrected')) {
             pm02 = this.calculatePM25(aqd.pm02, aqd.rhum);
         }
-        await this.setCapabilityValue('measure_pm25', pm02);
-        await this.setCapabilityValue('measure_temperature', aqd.atmp);
-        await this.setCapabilityValue('measure_humidity', aqd.rhum);
-        await this.setCapabilityValue('measure_voc', aqd.tvocRaw);
-        await this.setCapabilityValue('measure_voc_idx', aqd.tvocIndex);
-        await this.setCapabilityValue('measure_nox', aqd.noxRaw);
-        await this.setCapabilityValue('measure_nox_idx', aqd.noxIndex);
+        await this.safeUpdateCapabilityValue('measure_pm25', pm02);
+        await this.safeUpdateCapabilityValue('measure_temperature', aqd.atmp);
+        await this.safeUpdateCapabilityValue('measure_humidity', aqd.rhum);
+        await this.safeUpdateCapabilityValue('measure_voc', aqd.tvocRaw);
+        await this.safeUpdateCapabilityValue('measure_voc_idx', aqd.tvocIndex);
+        await this.safeUpdateCapabilityValue('measure_nox', aqd.noxRaw);
+        await this.safeUpdateCapabilityValue('measure_nox_idx', aqd.noxIndex);
     }
 
     onDeleted(): void {
