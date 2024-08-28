@@ -1,14 +1,11 @@
 {
-  "save": "Skapa enhet",
-  "saving": "Verifierar enhet",
-  "settings": {
-    "title": "Appinställningar",
-    "saved": "Inställningar har nu sparats."
-  },
   "device": {
-    "create": "Anslut till en AirGradient-enhet",
-    "ipAddress": "Enhetens IP-adress",
-    "ipAddressHelp": "Detta är den unika IP-adressen för din AirGradient-enhet.",
-    "ipAddressRequired": "Vänligen ange IP-adressen för din AirGradient-enhet."
+      "save": "Skapa enhet",
+      "saving": "Verifierar enhet",
+      "failed": "Enhetsverifiering misslyckades",
+      "create": "Anslut till en AirGradient-enhet",
+      "ipAddress": "Enhetens IP-adress",
+      "ipAddressHelp": "Detta är den unika IP-adressen till din AirGradient-enhet.",
+      "ipAddressRequired": "Vänligen ange IP-adressen till din AirGradient-enhet."
   }
 }

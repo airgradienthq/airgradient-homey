@@ -98,10 +98,10 @@ export default class SharedDevice extends Homey.Device {
     async updateCapabilities() {
         const air = new AirGradient(this.getSetting('ipAddress'), this.log, SharedDevice.enableDebug);
         const aqd = await air.getAirQualityData();
-        if (aqd.status == AirGradientConnectStatus.FAILED_UKNOWN) return;
+        if (aqd.status === AirGradientConnectStatus.FAILED_UKNOWN) return;
 
 
-        if (aqd.status == AirGradientConnectStatus.UNREACHABLE) {
+        if (aqd.status === AirGradientConnectStatus.UNREACHABLE) {
             this.setUnavailable(`Device is not reachable at ${this.getSetting('ipAddress')}`);
             return;            
         }

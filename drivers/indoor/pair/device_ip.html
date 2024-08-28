@@ -7,28 +7,18 @@
     </div>
 </fieldset>
 
-<button id="save" class="homey-button-primary-full is-disabled" data-i18n="save" disabled="true">Save</button>
+<button id="save" class="homey-button-primary-full is-disabled" data-i18n="device.save" disabled="true">Save</button>
 
 <script type="text/javascript">
     const listenFor = ['keydown', 'keyup', 'keypress', 'change'];
     let isSaving = false;
-    let hasToken = false;
-
-    var tokenElement = document.getElementById("token");
     var ipAddressElement = document.getElementById("ipAddress");
     var saveElement = document.getElementById("save");
 
     Homey.setTitle(Homey.__("device.create"));
-    // Homey.on("has_token", function (value) {
-    //     hasToken = value;
-
-    //     if (!hasToken) {
-    //         tokenContainer.style.display = "block";
-    //     }
-    // });
 
     function validate() {
-        saveElement.disabled = !ipAddressElement.value.length || (!hasToken && !tokenElement.value.length);
+        saveElement.disabled = !ipAddressElement.value.length;
 
         if (saveElement.disabled) {
             saveElement.classList.add("is-disabled");
@@ -38,7 +28,6 @@
     }
 
     listenFor.forEach(event => {
-        tokenElement.addEventListener(event, validate);
         ipAddressElement.addEventListener(event, validate);
     });
 
@@ -51,40 +40,31 @@
         }
 
         saveElement.classList.add("is-loading");
-        saveElement.textContent = Homey.__('saving');
+        saveElement.textContent = Homey.__("device.saving");
         isSaving = true;
 
-        function createSBBDevice(result) {
-            const sbbName = result?.name ?? `SBB Fan@${ipAddressElement.value}`;
-            const sbbId = `id${result?.id}@${ipAddressElement.value}`;
-            Homey.createDevice({
-                name: sbbName,
-                data: {
-                    id: sbbId,
-                },
-                settings: {
-                    token: tokenElement.value,
-                    ipAddress: ipAddressElement.value,
-                    details: result,
-                },
-                capabilities: ["fan_mode", "onoff"]
-            }).then(function (result) {
+        function createAirDevice(result) {
+            Homey.createDevice(result).then(function (result) {
                 Homey.done();
             }).catch(function (error) {
                 Homey.alert(error);
             });
         }
 
-        Homey.emit("check_details", { token: tokenElement.value, ipAddress: ipAddressElement.value })
+        Homey.emit("check_details", { ipAddress: ipAddressElement.value })
             .then(result => {
-                createSBBDevice(result);
+                if (result !== null) {
+                    createAirDevice(result);
+                } else {
+                    throw new Error(Homey.__("device.failed"));
+                }
             })
             .catch(function (error) {
                 if (error) {
                     Homey.alert(error);
                     isSaving = false;
                     saveElement.classList.remove("is-loading");
-                    saveElement.textContent = Homey.__('save');
+                    saveElement.textContent = Homey.__("device.save");
                 }
             });
 

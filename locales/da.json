@@ -1,14 +1,11 @@
 {
-  "save": "Opret Enhed",
-  "saving": "Bekræfter Enhed",
-  "settings": {
-    "title": "Applikationsindstillinger",
-    "saved": "Indstillingerne er nu gemt."
-  },
   "device": {
-    "create": "Forbind til en AirGradient enhed",
-    "ipAddress": "Enhedens IP-adresse",
-    "ipAddressHelp": "Dette er den unikke IP-adresse på din AirGradient-enhed.",
-    "ipAddressRequired": "Angiv venligst IP-adressen på din AirGradient-enhed."
+      "save": "Opret enhed",
+      "saving": "Bekræfter enhed",
+      "failed": "Enhedsbekræftelse mislykkedes",
+      "create": "Tilslut til en AirGradient-enhed",
+      "ipAddress": "Enhedens IP-adresse",
+      "ipAddressHelp": "Dette er den unikke IP-adresse for din AirGradient-enhed.",
+      "ipAddressRequired": "Angiv venligst IP-adressen på din AirGradient-enhed."
   }
 }

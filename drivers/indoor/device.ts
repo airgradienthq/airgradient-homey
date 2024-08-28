@@ -5,7 +5,7 @@ class IndoorDevice extends SharedDevice {
 
   async onInit() {
     super.onInit();
-    this.log('OutdoorDevice has been initialized');
+    this.log('IndoorDevice has been initialized');
   }
 
 }

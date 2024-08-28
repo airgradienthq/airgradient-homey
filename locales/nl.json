@@ -1,14 +1,11 @@
 {
-  "save": "Apparaat aanmaken",
-  "saving": "Apparaat verifiëren",
-  "settings": {
-    "title": "Applicatie-instellingen",
-    "saved": "Instellingen zijn nu opgeslagen."
-  },
   "device": {
-    "create": "Verbind met een AirGradient-apparaat",
-    "ipAddress": "Apparaat IP-adres",
-    "ipAddressHelp": "Dit is het unieke IP-adres van je AirGradient-apparaat.",
-    "ipAddressRequired": "Geef alstublieft het IP-adres van je AirGradient-apparaat op."
+      "save": "Apparaat aanmaken",
+      "saving": "Apparaat verifiëren",
+      "failed": "Apparaatverificatie mislukt",
+      "create": "Verbind met een AirGradient-apparaat",
+      "ipAddress": "Apparaat IP-adres",
+      "ipAddressHelp": "Dit is het unieke IP-adres van je AirGradient-apparaat.",
+      "ipAddressRequired": "Geef het IP-adres van je AirGradient-apparaat op."
   }
 }

@@ -1,14 +1,11 @@
 {
-  "save": "Crea Dispositivo",
-  "saving": "Verifica Dispositivo",
-  "settings": {
-    "title": "Impostazioni dell'applicazione",
-    "saved": "Le impostazioni sono state salvate."
-  },
   "device": {
-    "create": "Connetti a un dispositivo AirGradient",
-    "ipAddress": "Indirizzo IP del Dispositivo",
-    "ipAddressHelp": "Questo è l'indirizzo IP unico del tuo dispositivo AirGradient.",
-    "ipAddressRequired": "Si prega di fornire l'indirizzo IP del dispositivo AirGradient."
+      "save": "Crea dispositivo",
+      "saving": "Verifica del dispositivo in corso",
+      "failed": "Verifica del dispositivo fallita",
+      "create": "Connetti a un dispositivo AirGradient",
+      "ipAddress": "Indirizzo IP del dispositivo",
+      "ipAddressHelp": "Questo è l'indirizzo IP univoco del tuo dispositivo AirGradient.",
+      "ipAddressRequired": "Fornisci l'indirizzo IP del tuo dispositivo AirGradient."
   }
 }
