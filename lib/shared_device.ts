@@ -98,31 +98,53 @@ export default class SharedDevice extends Homey.Device {
     async updateCapabilities() {
         const air = new AirGradient(this.getSetting('ipAddress'), this.log, SharedDevice.enableDebug);
         const aqd = await air.getAirQualityData();
+        
         if (aqd.status === AirGradientConnectStatus.FAILED_UKNOWN) return;
-
-
+    
         if (aqd.status === AirGradientConnectStatus.UNREACHABLE) {
             this.setUnavailable(`Device is not reachable at ${this.getSetting('ipAddress')}`);
-            return;            
+            return;
         }
-
+    
         this.setAvailable();
         const config = await air.getDeviceConfig();
-
+    
         await this.setSettings({ 'firmware': aqd.firmware });
         await this.setSettings({ 'postDataToAirGradient': config?.postDataToAirGradient });
-
+    
         await this.safeUpdateCapabilityValue('measure_pm1', aqd.pm01);
         await this.safeUpdateCapabilityValue('measure_pm10', aqd.pm10);
         await this.safeUpdateCapabilityValue('measure_co2', aqd.rco2);
         await this.safeUpdateCapabilityValue('measure_pm03_cnt', aqd.pm003Count);
+    
+        // Apply PM2.5 correction if enabled
         let pm02 = aqd.pm02;
         if (aqd.isIndoor() && this.getSetting('pm02_uses_corrected')) {
             pm02 = this.calculatePM25(aqd.pm02, aqd.rhum);
         }
         await this.safeUpdateCapabilityValue('measure_pm25', pm02);
-        await this.safeUpdateCapabilityValue('measure_temperature', aqd.atmp);
-        await this.safeUpdateCapabilityValue('measure_humidity', aqd.rhum);
+    
+        // Temperature correction (only if outdoor & enabled)
+        let temperature = aqd.atmp;
+        if (aqd.isOutdoor() && this.getSetting('temperature_uses_corrected')) {
+            if (temperature < 10) {
+                temperature = (temperature * 1.327) - 6.738;
+            } else {
+                temperature = (temperature * 1.181) - 5.113;
+            }
+        }
+        await this.safeUpdateCapabilityValue('measure_temperature', temperature);
+    
+        // Humidity correction (only if outdoor & enabled)
+        let humidity = aqd.rhum;
+        if (aqd.isOutdoor() && this.getSetting('humidity_uses_corrected')) {
+            humidity = (humidity * 1.259) + 7.34;
+            if (humidity > 100) {
+                humidity = 100;
+            }
+        }
+        await this.safeUpdateCapabilityValue('measure_humidity', humidity);
+    
         await this.safeUpdateCapabilityValue('measure_voc', aqd.tvocRaw);
         await this.safeUpdateCapabilityValue('measure_voc_idx', aqd.tvocIndex);
         await this.safeUpdateCapabilityValue('measure_nox', aqd.noxRaw);

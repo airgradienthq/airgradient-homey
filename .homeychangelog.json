@@ -37,5 +37,8 @@
   },
   "1.1.4": {
     "en": "Outdoor fix create"
+  },
+  "1.1.5": {
+    "en": "Added correction algorithms for the temperature and humidity readings for the Open Air Outdoor"
   }
 }
