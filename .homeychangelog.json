@@ -40,5 +40,8 @@
   },
   "1.1.5": {
     "en": "Added correction algorithms for the temperature and humidity readings for the Open Air Outdoor"
+  },
+  "1.2.0": {
+    "en": "Dependancy updates"
   }
 }

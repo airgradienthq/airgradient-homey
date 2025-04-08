@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.airgradient",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -895,18 +895,32 @@
               "type": "checkbox",
               "value": true,
               "label": {
-                "en": "PM 2.5 uses Corrected Value",
-                "nl": "PM 2,5 gebruikt gecorrigeerde waarde",
-                "da": "PM 2,5 bruger korrigeret værdi",
-                "de": "PM 2.5 verwendet den korrigierten Wert",
-                "es": "PM 2.5 usa valor corregido",
-                "fr": "PM 2.5 utilise la valeur corrigée",
-                "it": "PM 2,5 utilizza il valore corretto",
-                "no": "PM 2,5 bruker korrigert verdi",
-                "sv": "PM 2,5 använder korrigerat värde",
-                "pl": "PM 2,5 używa wartości skorygowanej",
-                "ru": "PM 2.5 использует исправленные значения",
-                "ko": "PM 2.5 수정된 값 사용"
+                "en": "Use corrected PM 2.5 values",
+                "nl": "Gebruik gecorrigeerde PM 2,5-waarden",
+                "da": "Brug korrigerede PM 2,5-værdier",
+                "de": "Verwenden Sie korrigierte PM 2,5-Werte",
+                "es": "Usar valores corregidos de PM 2.5",
+                "fr": "Utiliser les valeurs corrigées de PM 2,5",
+                "it": "Usa valori corretti di PM 2,5",
+                "no": "Bruk korrigerte PM 2,5-verdier",
+                "sv": "Använd korrigerade PM 2,5-värden",
+                "pl": "Użyj skorygowanych wartości PM 2,5",
+                "ru": "Использовать скорректированные значения PM 2,5",
+                "ko": "보정된 PM 2.5 값 사용"
+              },
+              "hint": {
+                "en": "By enabling this feature the correction algorithms provided by AirGradient will be used to correctly adjust the PM 2.5 values. When disabled raw measurements will be displayed.",
+                "nl": "Door deze functie in te schakelen, worden de correctie-algoritmen van AirGradient gebruikt om de PM 2,5-waarden correct aan te passen. Wanneer uitgeschakeld, worden ruwe metingen weergegeven.",
+                "da": "Ved at aktivere denne funktion vil de korrektion algoritmer leveret af AirGradient blive brugt til at justere PM 2,5-værdierne korrekt. Når deaktiveret, vises rå målinger.",
+                "de": "Durch Aktivieren dieser Funktion werden die von AirGradient bereitgestellten Korrekturalgorithmen verwendet, um die PM 2,5-Werte korrekt anzupassen. Wenn deaktiviert, werden Rohmessungen angezeigt.",
+                "es": "Al habilitar esta función, los algoritmos de corrección proporcionados por AirGradient se utilizarán para ajustar correctamente los valores de PM 2.5. Cuando está deshabilitado, se mostrarán las mediciones en bruto.",
+                "fr": "En activant cette fonctionnalité, les algorithmes de correction fournis par AirGradient seront utilisés pour ajuster correctement les valeurs de PM 2,5. Lorsqu'elle est désactivée, les mesures brutes seront affichées.",
+                "it": "Abilitando questa funzione, gli algoritmi di correzione forniti da AirGradient verranno utilizzati per regolare correttamente i valori di PM 2,5. Quando disabilitato, verranno visualizzate le misurazioni grezze.",
+                "no": "Ved å aktivere denne funksjonen vil korrigeringsalgoritmene levert av AirGradient bli brukt til å justere PM 2,5-verdiene riktig. Når deaktivert, vises råmålinger.",
+                "sv": "Genom att aktivera denna funktion kommer korrigeringsalgoritmerna som tillhandahålls av AirGradient att användas för att korrekt justera PM 2,5-värdena. När den är inaktiverad visas råa mätningar.",
+                "pl": "Włączając tę funkcję, algorytmy korekcji dostarczone przez AirGradient będą używane do prawidłowego dostosowania wartości PM 2,5. Gdy jest wyłączona, wyświetlane będą surowe pomiary.",
+                "ru": "Включив эту функцию, алгоритмы коррекции, предоставленные AirGradient, будут использоваться для правильной настройки значений PM 2,5. При отключении будут отображаться необработанные измерения.",
+                "ko": "이 기능을 활성화하면 AirGradient에서 제공하는 보정 알고리즘을 사용하여 PM 2.5 값을 올바르게 조정합니다. 비활성화되면 원시 측정값이 표시됩니다."
               }
             },
             {
@@ -1251,6 +1265,72 @@
               },
               "type": "checkbox",
               "value": true
+            },
+            {
+              "id": "temperature_uses_corrected",
+              "type": "checkbox",
+              "value": true,
+              "label": {
+                "en": "Use corrected temperature values",
+                "nl": "Gebruik gecorrigeerde temperatuurwaarden",
+                "da": "Brug korrigerede temperaturværdier",
+                "de": "Verwenden Sie korrigierte Temperaturwerte",
+                "es": "Usar valores corregidos de temperatura",
+                "fr": "Utiliser les valeurs corrigées de température",
+                "it": "Usa valori corretti di temperatura",
+                "no": "Bruk korrigerte temperaturverdier",
+                "sv": "Använd korrigerade temperaturvärden",
+                "pl": "Użyj skorygowanych wartości temperatury",
+                "ru": "Использовать скорректированные значения температуры",
+                "ko": "보정된 온도 값 사용"
+              },
+              "hint": {
+                "en": "By enabling this feature the correction algorithms provided by AirGradient will be used to correctly adjust the temperature values. When disabled raw measurements will be displayed.",
+                "nl": "Door deze functie in te schakelen, worden de correctie-algoritmen van AirGradient gebruikt om de temperatuurwaarden correct aan te passen. Wanneer uitgeschakeld, worden ruwe metingen weergegeven.",
+                "da": "Ved at aktivere denne funktion vil de korrektion algoritmer leveret af AirGradient blive brugt til at justere temperaturværdierne korrekt. Når deaktiveret, vises rå målinger.",
+                "de": "Durch Aktivieren dieser Funktion werden die von AirGradient bereitgestellten Korrekturalgorithmen verwendet, um die Temperaturwerte korrekt anzupassen. Wenn deaktiviert, werden Rohmessungen angezeigt.",
+                "es": "Al habilitar esta función, los algoritmos de corrección proporcionados por AirGradient se utilizarán para ajustar correctamente los valores de temperatura. Cuando está deshabilitado, se mostrarán las mediciones en bruto.",
+                "fr": "En activant cette fonctionnalité, les algorithmes de correction fournis par AirGradient seront utilisés pour ajuster correctement les valeurs de température. Lorsqu'elle est désactivée, les mesures brutes seront affichées.",
+                "it": "Abilitando questa funzione, gli algoritmi di correzione forniti da AirGradient verranno utilizzati per regolare correttamente i valori di temperatura. Quando disabilitato, verranno visualizzate le misurazioni grezze.",
+                "no": "Ved å aktivere denne funksjonen vil korrigeringsalgoritmene levert av AirGradient bli brukt til å justere temperaturverdiene riktig. Når deaktivert, vises råmålinger.",
+                "sv": "Genom att aktivera denna funktion kommer korrigeringsalgoritmerna som tillhandahålls av AirGradient att användas för att korrekt justera temperaturvärdena. När den är inaktiverad visas råa mätningar.",
+                "pl": "Włączając tę funkcję, algorytmy korekcji dostarczone przez AirGradient będą używane do prawidłowego dostosowania wartości temperatury. Gdy jest wyłączona, wyświetlane będą surowe pomiary.",
+                "ru": "Включив эту функцию, алгоритмы коррекции, предоставленные AirGradient, будут использоваться для правильной настройки значений температуры. При отключении будут отображаться необработанные измерения.",
+                "ko": "이 기능을 활성화하면 AirGradient에서 제공하는 보정 알고리즘을 사용하여 온도 값을 올바르게 조정합니다. 비활성화되면 원시 측정값이 표시됩니다."
+              }
+            },
+            {
+              "id": "humidity_uses_corrected",
+              "type": "checkbox",
+              "value": true,
+              "label": {
+                "en": "Use corrected humidity values",
+                "nl": "Gebruik gecorrigeerde vochtigheidswaarden",
+                "da": "Brug korrigerede fugtighedsværdier",
+                "de": "Verwenden Sie korrigierte Feuchtigkeitswerte",
+                "es": "Usar valores corregidos de humedad",
+                "fr": "Utiliser les valeurs corrigées d'humidité",
+                "it": "Usa valori corretti di umidità",
+                "no": "Bruk korrigerte fuktighetsverdier",
+                "sv": "Använd korrigerade fuktighetsvärden",
+                "pl": "Użyj skorygowanych wartości wilgotności",
+                "ru": "Использовать скорректированные значения влажности",
+                "ko": "보정된 습도 값 사용"
+              },
+              "hint": {
+                "en": "By enabling this feature the correction algorithms provided by AirGradient will be used to correctly adjust the humidity values. When disabled raw measurements will be displayed.",
+                "nl": "Door deze functie in te schakelen, worden de correctie-algoritmen van AirGradient gebruikt om de vochtigheidswaarden correct aan te passen. Wanneer uitgeschakeld, worden ruwe metingen weergegeven.",
+                "da": "Ved at aktivere denne funktion vil de korrektion algoritmer leveret af AirGradient blive brugt til at justere fugtighedsværdierne korrekt. Når deaktiveret, vises rå målinger.",
+                "de": "Durch Aktivieren dieser Funktion werden die von AirGradient bereitgestellten Korrekturalgorithmen verwendet, um die Feuchtigkeitswerte korrekt anzupassen. Wenn deaktiviert, werden Rohmessungen angezeigt.",
+                "es": "Al habilitar esta función, los algoritmos de corrección proporcionados por AirGradient se utilizarán para ajustar correctamente los valores de humedad. Cuando está deshabilitado, se mostrarán las mediciones en bruto.",
+                "fr": "En activant cette fonctionnalité, les algorithmes de correction fournis par AirGradient seront utilisés pour ajuster correctement les valeurs d'humidité. Lorsqu'elle est désactivée, les mesures brutes seront affichées.",
+                "it": "Abilitando questa funzione, gli algoritmi di correzione forniti da AirGradient verranno utilizzati per regolare correttamente i valori di umidità. Quando disabilitato, verranno visualizzate le misurazioni grezze.",
+                "no": "Ved å aktivere denne funksjonen vil korrigeringsalgoritmene levert av AirGradient bli brukt til å justere fuktighetsverdiene riktig. Når deaktivert, vises råmålinger.",
+                "sv": "Genom att aktivera denna funktion kommer korrigeringsalgoritmerna som tillhandahålls av AirGradient att användas för att korrekt justera fuktighetsvärdena. När den är inaktiverad visas råa mätningar.",
+                "pl": "Włączając tę funkcję, algorytmy korekcji dostarczone przez AirGradient będą używane do prawidłowego dostosowania wartości wilgotności. Gdy jest wyłączona, wyświetlane będą surowe pomiary.",
+                "ru": "Включив эту функцию, алгоритмы коррекции, предоставленные AirGradient, будут использоваться для правильной настройки значений влажности. При отключении будут отображаться необработанные измерения.",
+                "ko": "이 기능을 활성화하면 AirGradient에서 제공하는 보정 알고리즘을 사용하여 습도 값을 올바르게 조정합니다. 비활성화되면 원시 측정값이 표시됩니다."
+              }
             }
           ]
         },
